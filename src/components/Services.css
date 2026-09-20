@@ -1,0 +1,342 @@
+/* ==================================================
+   SHAN ARCH STUDIO - SERVICES SECTION (POLISHED)
+   Aesthetic: Editorial Architectural Studio Index
+   Palette: Ivory (#F5F1E8), Charcoal (#171714), Gold (#B89455), Stone (#5B5851), Border (#DED7C9)
+================================================== */
+
+.services-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-ivory, #F5F1E8);
+  color: var(--color-primary, #171714);
+  padding: clamp(80px, 10vh, 130px) clamp(24px, 4vw, 56px);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border, #DED7C9);
+}
+
+/* Very subtle architectural blueprint watermark (faint annotation) */
+.services-watermark-bg {
+  position: absolute;
+  top: 12%;
+  right: -2%;
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(200px, 28vw, 360px);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-primary, #171714);
+  opacity: 0.018; /* Highly subtle, non-intrusive */
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  letter-spacing: -0.05em;
+}
+
+.services-blueprint-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, rgba(222, 215, 201, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(222, 215, 201, 0.25) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.services-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(64px, 8.5vh, 96px);
+}
+
+/* --------------------------------------------------
+   MAIN TWO-COLUMN LAYOUT
+-------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  align-items: flex-start;
+  gap: clamp(40px, 5.5vw, 84px);
+}
+
+@media (max-width: 960px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* --------------------------------------------------
+   LEFT COLUMN: INTRO & HEADINGS
+-------------------------------------------------- */
+.services-intro-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: sticky;
+  top: 96px;
+}
+
+@media (max-width: 960px) {
+  .services-intro-left {
+    position: static;
+    max-width: 600px;
+  }
+}
+
+.services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+  margin-bottom: clamp(14px, 2vh, 20px);
+}
+
+.services-eyebrow-dash {
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+}
+
+.services-heading {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(2.4rem, 4vw, 3.6rem); /* Balanced editorial scale */
+  font-weight: 600;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  color: var(--color-primary, #171714);
+  margin-bottom: clamp(18px, 2.5vh, 26px);
+}
+
+.heading-line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 2px;
+}
+
+.heading-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.services-supporting-text {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: clamp(14.5px, 1.05vw, 16px);
+  font-weight: 400;
+  line-height: 1.68;
+  color: var(--color-secondary, #5B5851);
+  letter-spacing: 0.01em;
+  margin-bottom: clamp(20px, 3vh, 28px);
+  max-width: 440px;
+}
+
+.services-intro-gold-line {
+  width: 44px;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+}
+
+/* --------------------------------------------------
+   RIGHT COLUMN: 11 HORIZONTAL SERVICE ROWS
+   Spacious editorial rows with dedicated number column
+-------------------------------------------------- */
+.services-list-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid rgba(222, 215, 201, 0.75);
+}
+
+.service-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr auto; /* Dedicated narrow column for number */
+  align-items: baseline;
+  gap: clamp(16px, 2.5vw, 32px);
+  padding: clamp(26px, 3.4vh, 36px) clamp(12px, 1.6vw, 20px); /* Enhanced vertical breathing room */
+  border-bottom: 1px solid rgba(222, 215, 201, 0.75);
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: 
+    background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .service-row {
+    grid-template-columns: 36px 1fr;
+    row-gap: 8px;
+    padding: 22px 6px;
+  }
+}
+
+/* Subtle warm ivory tint on hover */
+.service-row:hover {
+  background-color: rgba(184, 148, 85, 0.028);
+}
+
+/* Left number indicator in its own column */
+.service-number {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+  font-weight: 500;
+  color: var(--color-secondary, #5B5851);
+  line-height: 1.1;
+  transition: color 0.4s ease;
+  letter-spacing: -0.01em;
+}
+
+.service-row:hover .service-number {
+  color: var(--color-gold, #B89455);
+}
+
+/* Center title & description */
+.service-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-row:hover .service-body {
+  transform: translateX(5px); /* Subtle 5px shift */
+}
+
+@media (max-width: 640px) {
+  .service-row:hover .service-body {
+    transform: none;
+  }
+}
+
+.service-title {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: clamp(13px, 1.05vw, 15px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+  line-height: 1.2;
+}
+
+.service-desc {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: clamp(13px, 0.95vw, 14.5px);
+  font-weight: 400;
+  line-height: 1.62;
+  color: var(--color-secondary, #5B5851);
+  letter-spacing: 0.01em;
+  max-width: 580px;
+}
+
+/* Right Arrow */
+.service-arrow-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.4s ease;
+  color: var(--color-secondary, #5B5851);
+}
+
+@media (max-width: 640px) {
+  .service-arrow-wrap {
+    grid-column: 2 / 3;
+    justify-content: flex-start;
+    margin-top: 4px;
+  }
+}
+
+.service-arrow {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.service-row:hover .service-arrow-wrap {
+  transform: translateX(6px); /* Subtle 6px forward shift */
+  color: var(--color-gold, #B89455);
+}
+
+/* --------------------------------------------------
+   SECTION END STATEMENT & CTA
+-------------------------------------------------- */
+.services-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding-top: clamp(36px, 5vh, 56px);
+  border-top: 1px solid rgba(222, 215, 201, 0.6);
+}
+
+.services-statement {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.95rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-primary, #171714);
+  letter-spacing: 0.01em;
+  max-width: 680px;
+}
+
+.services-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+  text-decoration: none;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.services-cta-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.services-cta-arrow {
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--color-gold, #B89455);
+}
+
+.services-cta-link:hover {
+  color: var(--color-gold, #B89455);
+}
+
+.services-cta-link:hover .services-cta-arrow {
+  transform: translateX(5px);
+}
+
+.services-cta-link:hover .services-cta-line {
+  transform: scaleX(1.08);
+}

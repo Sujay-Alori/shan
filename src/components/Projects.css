@@ -1,0 +1,460 @@
+/* ==================================================
+   SHAN ARCH STUDIO - PROJECTS / PORTFOLIO SECTION
+   Aesthetic: Editorial Architectural Studio Index
+   Palette: Ivory (#F5F1E8), Charcoal (#171714), Gold (#B89455), Stone (#5B5851), Border (#DED7C9)
+================================================== */
+
+.projects-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-ivory, #F5F1E8);
+  color: var(--color-primary, #171714);
+  padding: clamp(80px, 11vh, 150px) clamp(24px, 4vw, 56px);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border, #DED7C9);
+}
+
+/* Ambient decorative architectural watermark & blueprint grid */
+.projects-blueprint-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, rgba(222, 215, 201, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(222, 215, 201, 0.25) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.projects-watermark-bg {
+  position: absolute;
+  top: 6%;
+  left: -2%;
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(200px, 28vw, 360px);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-primary, #171714);
+  opacity: 0.018;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  letter-spacing: -0.05em;
+}
+
+.projects-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 7vh, 80px);
+}
+
+/* --------------------------------------------------
+   1. SECTION HEADER
+-------------------------------------------------- */
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: clamp(32px, 5vw, 64px);
+  padding-bottom: clamp(24px, 3.5vh, 36px);
+  border-bottom: 1px solid rgba(222, 215, 201, 0.7);
+}
+
+@media (max-width: 860px) {
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.projects-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.projects-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+  margin-bottom: clamp(12px, 1.8vh, 18px);
+}
+
+.projects-eyebrow-dash {
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+}
+
+.projects-heading {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(2.6rem, 4.4vw, 3.8rem);
+  font-weight: 600;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  color: var(--color-primary, #171714);
+  margin: 0;
+}
+
+.heading-line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 2px;
+}
+
+.heading-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.projects-supporting-text {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: clamp(14px, 1vw, 15.5px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-secondary, #5B5851);
+  letter-spacing: 0.01em;
+  max-width: 440px;
+  margin: 0;
+}
+
+/* --------------------------------------------------
+   2. CATEGORY FILTERS (NO PILLS, ELEGANT TEXT NAVIGATION)
+-------------------------------------------------- */
+.projects-filters-wrap {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+  padding-bottom: 6px;
+}
+
+.projects-filters-wrap::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.projects-filters-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+  min-width: max-content;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--color-gold, #B89455);
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.filter-btn:hover {
+  color: var(--color-primary, #171714);
+}
+
+.filter-btn.active {
+  color: var(--color-gold, #B89455);
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* --------------------------------------------------
+   3. ASYMMETRIC EDITORIAL PORTFOLIO GRID
+-------------------------------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(36px, 5vw, 64px) clamp(28px, 4vw, 52px);
+  width: 100%;
+}
+
+@media (max-width: 860px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Grid Spanning Classes for Asymmetric Rhythm */
+.project-card.span-featured {
+  grid-column: span 2;
+}
+
+.project-card.span-wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 860px) {
+  .project-card.span-featured,
+  .project-card.span-wide {
+    grid-column: span 1;
+  }
+}
+
+/* --------------------------------------------------
+   4. PROJECT CARD
+-------------------------------------------------- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+/* Card Header: Title & Meta Line */
+.project-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-title {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(1.3rem, 1.8vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--color-primary, #171714);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+  color: var(--color-gold, #B89455);
+}
+
+.project-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+}
+
+.meta-sep {
+  color: var(--color-gold, #B89455);
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* Image Frame [IMAGE PLACEHOLDER] */
+.project-media-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #EDE8DC;
+  border: 1px solid rgba(222, 215, 201, 0.6);
+  box-sizing: border-box;
+}
+
+/* Aspect ratios tuned to composition span */
+.span-featured .project-media-wrap {
+  aspect-ratio: 16 / 9.5;
+  max-height: 520px;
+}
+
+.span-wide .project-media-wrap {
+  aspect-ratio: 16 / 8.5;
+  max-height: 440px;
+}
+
+.span-tall .project-media-wrap {
+  aspect-ratio: 3 / 3.8;
+}
+
+.span-standard .project-media-wrap {
+  aspect-ratio: 4 / 3.1;
+}
+
+@media (max-width: 860px) {
+  .span-featured .project-media-wrap,
+  .span-wide .project-media-wrap,
+  .span-tall .project-media-wrap,
+  .span-standard .project-media-wrap {
+    aspect-ratio: 16 / 11;
+    max-height: none;
+  }
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.035);
+}
+
+/* Subtle Hover Overlay */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 23, 20, 0.04);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Architectural Corner Accents */
+.project-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(184, 148, 85, 0.5);
+  border-style: solid;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.p-corner-tl { top: 8px; left: 8px; border-width: 1px 0 0 1px; }
+.p-corner-tr { top: 8px; right: 8px; border-width: 1px 1px 0 0; }
+.p-corner-bl { bottom: 8px; left: 8px; border-width: 0 0 1px 1px; }
+.p-corner-br { bottom: 8px; right: 8px; border-width: 0 1px 1px 0; }
+
+/* --------------------------------------------------
+   5. CARD ACTION / FOOTER: VIEW PROJECT →
+-------------------------------------------------- */
+.project-card-footer {
+  padding-top: 2px;
+}
+
+.view-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+  transition: color 0.3s ease;
+}
+
+.view-project-arrow {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--color-gold, #B89455);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .view-project-link {
+  color: var(--color-gold, #B89455);
+}
+
+.project-card:hover .view-project-arrow {
+  transform: translateX(5px);
+}
+
+/* --------------------------------------------------
+   6. SECTION FOOTER & CTA
+-------------------------------------------------- */
+.projects-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: clamp(24px, 4vh, 40px);
+}
+
+.projects-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+  text-decoration: none;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.projects-cta-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-cta-arrow {
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--color-gold, #B89455);
+}
+
+.projects-cta-link:hover {
+  color: var(--color-gold, #B89455);
+}
+
+.projects-cta-link:hover .projects-cta-arrow {
+  transform: translateX(5px);
+}
+
+.projects-cta-link:hover .projects-cta-line {
+  transform: scaleX(1.08);
+}

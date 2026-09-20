@@ -1,0 +1,142 @@
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--color-white, #FFFFFF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+/* Subtle architectural grid pattern background - ultra faint and elegant */
+.preloader-bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.025;
+  background-image: 
+    linear-gradient(to right, #0A0A0A 1px, transparent 1px),
+    linear-gradient(to bottom, #0A0A0A 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Architectural frame hairline corners */
+.preloader-frame-corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: rgba(176, 122, 10, 0.2);
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.corner-tl {
+  top: 32px;
+  left: 32px;
+  border-width: 1px 0 0 1px;
+}
+
+.corner-tr {
+  top: 32px;
+  right: 32px;
+  border-width: 1px 1px 0 0;
+}
+
+.corner-bl {
+  bottom: 32px;
+  left: 32px;
+  border-width: 0 0 1px 1px;
+}
+
+.corner-br {
+  bottom: 32px;
+  right: 32px;
+  border-width: 0 1px 1px 0;
+}
+
+/* Stage content holding the SVG composition */
+.preloader-stage {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .preloader-stage {
+    max-width: 440px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .preloader-stage {
+    max-width: 320px;
+    padding: 12px;
+  }
+  .preloader-frame-corner {
+    width: 16px;
+    height: 16px;
+  }
+  .corner-tl { top: 18px; left: 18px; }
+  .corner-tr { top: 18px; right: 18px; }
+  .corner-bl { bottom: 18px; left: 18px; }
+  .corner-br { bottom: 18px; right: 18px; }
+}
+
+.preloader-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* Base states for animated groups */
+.s-reveal-group,
+.a-reveal-group,
+.gold-line-group,
+.brand-name-group,
+.tagline-group {
+  visibility: hidden;
+}
+
+/* Curtain exit styling */
+.preloader-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white, #FFFFFF);
+  transform-origin: top center;
+  z-index: 1;
+}
+
+.preloader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Architectural drafting pen/guide indicator */
+.drafting-pen-tip {
+  filter: drop-shadow(0 0 4px rgba(176, 122, 10, 0.4));
+}

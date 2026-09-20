@@ -1,0 +1,610 @@
+/* ==================================================
+   SHAN ARCH STUDIO - HERO SECTION
+   Aesthetic: Editorial Architectural Canvas
+   Palette: Ivory (#F5F1E8), Charcoal (#171714), Gold (#B89455), Stone (#5B5851), Border (#DED7C9)
+================================================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  background-color: var(--color-ivory, #F5F1E8);
+  color: var(--color-primary, #171714);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(14px, 2vh, 22px) clamp(24px, 3.5vw, 48px);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .hero-section {
+    height: auto;
+    min-height: 100dvh;
+    max-height: none;
+    overflow-y: auto;
+    padding: 20px 20px 32px 20px;
+  }
+}
+
+/* --------------------------------------------------
+   1. HEADER / NAVIGATION
+-------------------------------------------------- */
+.hero-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  padding-bottom: clamp(10px, 1.4vh, 16px);
+  border-bottom: 1px solid rgba(222, 215, 201, 0.45);
+}
+
+.hero-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.hero-logo-link:hover {
+  opacity: 0.85;
+}
+
+.hero-logo-img {
+  height: clamp(48px, 5.5vh, 60px);
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-logo-img {
+    height: 44px;
+  }
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.2vw, 32px);
+}
+
+@media (max-width: 860px) {
+  .hero-nav {
+    gap: 16px;
+  }
+  .nav-item-desktop {
+    display: none;
+  }
+}
+
+.hero-nav-item {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+  text-decoration: none;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-nav-item:hover {
+  color: var(--color-gold, #B89455);
+}
+
+.hero-nav-item:hover::after {
+  width: 100%;
+}
+
+.nav-menu-btn {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .nav-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+  }
+}
+
+.nav-menu-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-gold, #B89455);
+  display: inline-block;
+}
+
+/* Mobile Navigation Dropdown / Drawer */
+.hero-mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg, #F5F1E8);
+  border-bottom: 1px solid var(--color-border, #DED7C9);
+  padding: 24px clamp(20px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  animation: mobileMenuFade 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes mobileMenuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-nav-link {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-gold, #B89455);
+}
+
+.mobile-menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border, #DED7C9);
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11px;
+}
+
+.mobile-menu-location {
+  color: var(--color-secondary, #5B5851);
+}
+
+.mobile-menu-phone {
+  color: var(--color-gold, #B89455);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------
+   2. MAIN HERO BODY (ASYMMETRIC TWO-COLUMN)
+   Reduced gap between typography and artwork
+-------------------------------------------------- */
+.hero-body {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 32px);
+  flex-grow: 1;
+  padding: clamp(6px, 1.2vh, 16px) 0;
+  z-index: 10;
+  min-height: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-body {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    padding: 20px 0;
+  }
+}
+
+/* Left Column Content */
+.hero-content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 490px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+  margin-bottom: clamp(10px, 1.4vh, 16px);
+}
+
+.hero-eyebrow-dash {
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+}
+
+/* Heading: Cormorant Garamond Stacked */
+.hero-heading {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(3rem, 5.6vw, 5rem);
+  font-weight: 600;
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  color: var(--color-primary, #171714);
+  margin-bottom: clamp(12px, 1.6vh, 20px);
+}
+
+.heading-line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 2px;
+}
+
+.heading-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.heading-gold-italic {
+  color: var(--color-gold, #B89455);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Supporting Subtitle & Description */
+.hero-supporting {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1vh, 10px);
+  margin-bottom: clamp(14px, 1.8vh, 22px);
+}
+
+.hero-disciplines {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+}
+
+.hero-philosophy {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-secondary, #5B5851);
+  letter-spacing: 0.01em;
+}
+
+.hero-philosophy-line {
+  display: block;
+}
+
+/* Minimal Architectural CTA */
+.hero-cta-wrap {
+  margin-top: 2px;
+}
+
+.hero-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary, #171714);
+  text-decoration: none;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.hero-cta-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gold, #B89455);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-cta-arrow {
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--color-gold, #B89455);
+}
+
+.hero-cta-link:hover {
+  color: var(--color-gold, #B89455);
+}
+
+.hero-cta-link:hover .hero-cta-arrow {
+  transform: translateX(5px);
+}
+
+.hero-cta-link:hover .hero-cta-line {
+  transform: scaleX(1.08);
+}
+
+/* --------------------------------------------------
+   3. RIGHT COLUMN (ARCHITECTURAL PENCIL SKETCH)
+   Cropped perfectly to remove internal PNG black border
+   while preserving the entire house and tree artwork
+-------------------------------------------------- */
+.hero-visual-right {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Moved slightly toward the left */
+  justify-content: center;
+}
+
+.hero-sketch-mount {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: clamp(350px, 60vh, 580px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+@media (max-width: 1200px) {
+  .hero-sketch-mount {
+    max-width: 580px;
+    height: clamp(310px, 54vh, 500px);
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-sketch-mount {
+    width: 100%;
+    max-width: 100%;
+    height: clamp(260px, 44vh, 400px);
+  }
+}
+
+.hero-sketch-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-sketch-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.01);
+  will-change: transform;
+}
+
+/* Architectural sketch subtle caption */
+.hero-sketch-caption {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 0 4px;
+}
+
+@media (max-width: 1200px) {
+  .hero-sketch-caption {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-sketch-caption {
+    max-width: 100%;
+  }
+}
+
+.caption-label {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+  opacity: 0.75;
+}
+
+.caption-meta {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold, #B89455);
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------
+   4. BOTTOM BAR: STATISTICS & SCROLL INDICATOR
+   Comfortably visible within 100vh
+-------------------------------------------------- */
+.hero-footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 20;
+  padding-top: clamp(8px, 1.4vh, 14px);
+  border-top: 1px solid rgba(222, 215, 201, 0.45);
+}
+
+@media (max-width: 768px) {
+  .hero-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 16px;
+  }
+}
+
+.hero-stats-group {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(32px, 5vw, 60px);
+}
+
+@media (max-width: 768px) {
+  .hero-stats-group {
+    gap: 28px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(2rem, 3.4vw, 2.85rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-primary, #171714);
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+  margin-top: 4px;
+}
+
+/* Scroll indicator */
+.hero-scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.scroll-text {
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-secondary, #5B5851);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s ease;
+}
+
+.scroll-line-wrap {
+  width: 1px;
+  height: 28px;
+  background-color: var(--color-border, #DED7C9);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line-runner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--color-gold, #B89455);
+  animation: scrollPulse 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+.hero-scroll-indicator:hover .scroll-text {
+  color: var(--color-gold, #B89455);
+}
