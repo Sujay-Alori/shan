@@ -40,6 +40,23 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
  */
 export const PROJECTS_DATA: ProjectItem[] = [
   {
+    id: 'project-interior-01',
+    number: '01',
+    title: 'Interior Design Project',
+    location: 'Kerala',
+    area: 'Residential',
+    status: 'COMPLETED',
+    type: 'Interior Architecture',
+    categories: ['INTERIOR'],
+    image: '/images/projects/int1.jpg',
+    description:
+      'A contemporary interior design project in Kerala featuring bespoke architectural detailing, warm materiality, and refined lighting schemes designed for sophisticated modern living.',
+    isFeatured: true,
+    gridSpan: 'featured',
+    services: ['Interior Design', 'Spatial Planning', 'Lighting & Material Curation'],
+    year: '2024',
+  },
+  {
     id: 'project-01',
     number: '01',
     title: 'PROJECT NAME 01',
