@@ -48,7 +48,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     status: 'COMPLETED',
     type: 'PROJECT TYPE',
     categories: ['COMPLETED', 'RESIDENTIAL', 'EXTERIOR'],
-    image: '/images/projects/project-01.svg',
+    image: '/images/projects/ext1.jpeg',
     description:
       'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
     isFeatured: true,
@@ -82,7 +82,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     status: 'ONGOING',
     type: 'PROJECT TYPE',
     categories: ['ONGOING', 'COMMERCIAL', 'EXTERIOR'],
-    image: '/images/projects/project-03.svg',
+    image: '/images/projects/ext2.jpeg',
     description:
       'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
     isFeatured: false,
@@ -98,8 +98,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
     area: 'AREA',
     status: 'COMPLETED',
     type: 'PROJECT TYPE',
-    categories: ['COMPLETED', 'RESIDENTIAL', 'EXTERIOR', 'INTERIOR'],
-    image: '/images/projects/project-04.svg',
+    categories: ['COMPLETED', 'RESIDENTIAL', 'EXTERIOR'],
+    image: '/images/projects/ext3.jpeg',
     description:
       'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
     isFeatured: false,
@@ -116,7 +116,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     status: 'ONGOING',
     type: 'PROJECT TYPE',
     categories: ['ONGOING', 'RESIDENTIAL', 'EXTERIOR'],
-    image: '/images/projects/project-05.svg',
+    image: '/images/projects/ext4.jpeg',
     description:
       'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
     isFeatured: false,
@@ -166,8 +166,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
     area: 'AREA',
     status: 'ONGOING',
     type: 'PROJECT TYPE',
-    categories: ['ONGOING', 'COMMERCIAL', 'EXTERIOR', 'INTERIOR'],
-    image: '/images/projects/project-08.svg',
+    categories: ['ONGOING', 'COMMERCIAL', 'EXTERIOR'],
+    image: '/images/projects/ext5.jpeg',
     description:
       'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
     isFeatured: false,
