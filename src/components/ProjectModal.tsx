@@ -24,6 +24,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
   if (!project) return null;
 
+  const inquiryWhatsAppUrl = `https://wa.me/919633980012?text=${encodeURIComponent(
+    `Hello Shan Arch Studio, I would like to inquire about project "${project.title}".`
+  )}`;
+
+  const primaryCategory =
+    project.categories && project.categories.length > 0
+      ? project.categories[0]
+      : 'RESIDENTIAL';
+
   return (
     <div
       className="project-modal-backdrop"
@@ -36,17 +45,25 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
         className="project-modal-card"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          type="button"
-          className="project-modal-close-btn"
-          onClick={onClose}
-          aria-label="Close Project Details"
-        >
-          ✕
-        </button>
+        {/* Top Bar with Project Number, Category, and Close Icon */}
+        <div className="project-modal-topbar">
+          <div className="project-modal-topbar-meta">
+            <span className="project-modal-top-number">{project.number}</span>
+            <span className="project-modal-top-sep">/</span>
+            <span className="project-modal-top-category">{primaryCategory}</span>
+          </div>
+          <button
+            type="button"
+            className="project-modal-close-btn"
+            onClick={onClose}
+            aria-label="Close Project Details"
+          >
+            ✕
+          </button>
+        </div>
 
         <div className="project-modal-scroll-body">
-          {/* Hero Media */}
+          {/* Large Project Image */}
           <div className="project-modal-hero-media">
             <img
               src={project.image}
@@ -57,31 +74,45 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Project Details Content */}
           <div className="project-modal-content">
+            {/* Title & Status Badge Header */}
             <div className="project-modal-header">
-              <div className="project-modal-eyebrow">
-                <span>{project.number} — {project.type}</span>
-                <span className="project-modal-status-badge">{project.status}</span>
+              <div className="project-modal-title-row">
+                <h2 className="project-modal-title">{project.title}</h2>
+                <span className="project-modal-status-badge">
+                  {project.status}
+                </span>
               </div>
-              <h2 className="project-modal-title">{project.title}</h2>
             </div>
 
+            {/* Clean 2-Column Project Details Layout */}
             <div className="project-modal-meta-grid">
               <div className="modal-meta-item">
-                <span className="modal-meta-label">Location</span>
+                <span className="modal-meta-label">CATEGORY</span>
+                <span className="modal-meta-value">
+                  {project.categories?.join(', ') || project.area || 'Residential'}
+                </span>
+              </div>
+
+              <div className="modal-meta-item">
+                <span className="modal-meta-label">DISCIPLINE</span>
+                <span className="modal-meta-value">{project.type}</span>
+              </div>
+
+              <div className="modal-meta-item">
+                <span className="modal-meta-label">LOCATION</span>
                 <span className="modal-meta-value">{project.location}</span>
               </div>
+
               <div className="modal-meta-item">
-                <span className="modal-meta-label">Area</span>
-                <span className="modal-meta-value">{project.area}</span>
-              </div>
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">Timeline</span>
-                <span className="modal-meta-value">{project.year || '2024'} • {project.status}</span>
+                <span className="modal-meta-label">PRACTICE</span>
+                <span className="modal-meta-value">Shan Arch Studio</span>
               </div>
             </div>
 
+            {/* Project Description */}
             <p className="project-modal-desc">{project.description}</p>
 
+            {/* Services / Disciplines Scope Tags */}
             {project.services && project.services.length > 0 && (
               <div className="project-modal-services-list">
                 {project.services.map((srv, idx) => (
@@ -91,6 +122,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 ))}
               </div>
             )}
+
+            {/* Full-width Outlined Inquiry Button */}
+            <div className="project-modal-action-wrap">
+              <a
+                href={inquiryWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-modal-inquire-btn"
+                aria-label={`Inquire about ${project.title} on WhatsApp`}
+              >
+                <span>INQUIRE ABOUT THIS PROJECT</span>
+                <span className="inquire-arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

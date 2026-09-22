@@ -7,12 +7,12 @@
 .about-section {
   position: relative;
   width: 100%;
-  background-color: var(--color-ivory, #F5F1E8);
-  color: var(--color-primary, #171714);
+  background-color: var(--color-bg, #0B0B0B);
+  color: var(--color-primary, #F5F1E8);
   padding: clamp(80px, 10vh, 140px) clamp(24px, 4vw, 56px);
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 1px solid var(--color-border, #DED7C9);
+  border-top: 1px solid var(--color-border, #2A2A2A);
 }
 
 .about-container {
@@ -57,14 +57,14 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   margin-bottom: clamp(14px, 2vh, 22px);
 }
 
 .about-eyebrow-dash {
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
 }
 
 .studio-heading {
@@ -73,7 +73,7 @@
   font-weight: 600;
   line-height: 0.96;
   letter-spacing: -0.02em;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   margin-bottom: clamp(24px, 3.5vh, 36px);
 }
 
@@ -100,7 +100,7 @@
   font-size: clamp(15px, 1.1vw, 16.5px);
   font-weight: 400;
   line-height: 1.68;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   letter-spacing: 0.01em;
 }
 
@@ -113,7 +113,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   text-decoration: none;
   padding-bottom: 5px;
   position: relative;
@@ -127,7 +127,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   transform-origin: left center;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -136,11 +136,11 @@
   display: inline-block;
   font-size: 14px;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .studio-approach-link:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .studio-approach-link:hover .studio-approach-arrow {
@@ -157,13 +157,13 @@
   flex-direction: column;
   gap: clamp(36px, 5vh, 52px);
   padding-left: clamp(0px, 3vw, 40px);
-  border-left: 1px solid rgba(222, 215, 201, 0.6);
+  border-left: 1px solid var(--color-border, #2A2A2A);
 }
 
 @media (max-width: 900px) {
   .studio-stats-column {
     border-left: none;
-    border-top: 1px solid rgba(222, 215, 201, 0.6);
+    border-top: 1px solid var(--color-border, #2A2A2A);
     padding-left: 0;
     padding-top: 36px;
     flex-direction: row;
@@ -183,7 +183,7 @@
   font-size: clamp(3rem, 5vw, 4.2rem);
   font-weight: 600;
   line-height: 0.95;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   letter-spacing: -0.02em;
 }
 
@@ -193,7 +193,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   margin-top: 8px;
 }
 
@@ -202,7 +202,7 @@
   font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   font-weight: 600;
   line-height: 1.1;
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   letter-spacing: -0.01em;
 }
 
@@ -220,14 +220,14 @@
 .about-divider-line {
   flex-grow: 1;
   height: 1px;
-  background-color: rgba(222, 215, 201, 0.65);
+  background-color: var(--color-border, #2A2A2A);
 }
 
 .about-divider-symbol {
   padding: 0 20px;
   font-family: var(--font-serif, 'Cormorant Garamond', serif);
   font-size: 14px;
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -252,14 +252,14 @@
   }
 }
 
-/* Left: Large Vertical Portrait with subtle ivory frame */
+/* Left: Large Vertical Portrait with subtle dark frame */
 .founder-image-mount {
   position: relative;
   width: 100%;
   max-width: 460px;
   padding: 10px;
-  background-color: #F9F6EE; /* Subtle ivory framing */
-  border: 1px solid #E2DCD0; /* Delicate architectural border */
+  background-color: #151515; /* Subtle dark framing */
+  border: 1px solid var(--color-border, #2A2A2A); /* Delicate architectural border */
   box-shadow: none; /* No drop shadow */
   box-sizing: border-box;
 }
@@ -277,7 +277,7 @@
   width: 100%;
   aspect-ratio: 4 / 5.2;
   overflow: hidden;
-  background-color: #EDE8DC;
+  background-color: #111111;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,16 +286,14 @@
 
 /* 
   Editorial photo treatment:
-  - 25% desaturation so red background is soft and muted
-  - Enhanced contrast & natural skin tones
-  - Clean rectangular portrait
+  - Clean rectangular portrait without harsh filters
 */
 .founder-portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
-  filter: saturate(0.76) contrast(1.05) brightness(0.99);
+  filter: saturate(0.85) contrast(1.05) brightness(0.98);
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   display: block;
   will-change: transform;
@@ -322,7 +320,7 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   margin-bottom: 12px;
 }
 
@@ -332,7 +330,7 @@
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.015em;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   margin-bottom: 8px;
 }
 
@@ -341,14 +339,14 @@
   font-size: 13.5px;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   margin-bottom: 20px;
 }
 
 .founder-gold-separator {
   width: 48px;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   margin-bottom: 24px;
 }
 
@@ -364,7 +362,7 @@
   font-size: clamp(14.5px, 1.05vw, 16px);
   font-weight: 400;
   line-height: 1.65;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   letter-spacing: 0.01em;
 }
 
@@ -375,7 +373,7 @@
   flex-wrap: wrap;
   gap: 14px;
   padding-top: 18px;
-  border-top: 1px solid rgba(222, 215, 201, 0.55);
+  border-top: 1px solid var(--color-border, #2A2A2A);
   width: 100%;
 }
 
@@ -385,13 +383,13 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
 }
 
 .founder-role-separator {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   display: inline-block;
 }

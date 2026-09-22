@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: var(--color-ivory, #F5F1E8);
+  background-color: var(--color-bg, #0B0B0B);
   position: relative;
   display: flex;
   flex-direction: column;

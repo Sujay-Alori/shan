@@ -7,12 +7,12 @@
 .services-section {
   position: relative;
   width: 100%;
-  background-color: var(--color-ivory, #F5F1E8);
-  color: var(--color-primary, #171714);
+  background-color: var(--color-bg, #0B0B0B);
+  color: var(--color-primary, #F5F1E8);
   padding: clamp(80px, 10vh, 130px) clamp(24px, 4vw, 56px);
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 1px solid var(--color-border, #DED7C9);
+  border-top: 1px solid var(--color-border, #2A2A2A);
 }
 
 /* Very subtle architectural blueprint watermark (faint annotation) */
@@ -24,8 +24,8 @@
   font-size: clamp(200px, 28vw, 360px);
   font-weight: 600;
   line-height: 1;
-  color: var(--color-primary, #171714);
-  opacity: 0.018; /* Highly subtle, non-intrusive */
+  color: var(--color-primary, #F5F1E8);
+  opacity: 0.02; /* Highly subtle, non-intrusive */
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -39,10 +39,10 @@
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(to right, rgba(222, 215, 201, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(222, 215, 201, 0.25) 1px, transparent 1px);
+    linear-gradient(to right, rgba(42, 42, 42, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 42, 42, 0.45) 1px, transparent 1px);
   background-size: 80px 80px;
-  opacity: 0.25;
+  opacity: 0.35;
   pointer-events: none;
 }
 
@@ -100,14 +100,14 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   margin-bottom: clamp(14px, 2vh, 20px);
 }
 
 .services-eyebrow-dash {
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
 }
 
 .services-heading {
@@ -116,7 +116,7 @@
   font-weight: 600;
   line-height: 0.96;
   letter-spacing: -0.015em;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   margin-bottom: clamp(18px, 2.5vh, 26px);
 }
 
@@ -136,7 +136,7 @@
   font-size: clamp(14.5px, 1.05vw, 16px);
   font-weight: 400;
   line-height: 1.68;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   letter-spacing: 0.01em;
   margin-bottom: clamp(20px, 3vh, 28px);
   max-width: 440px;
@@ -145,7 +145,7 @@
 .services-intro-gold-line {
   width: 44px;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
 }
 
 /* --------------------------------------------------
@@ -156,7 +156,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-top: 1px solid rgba(222, 215, 201, 0.75);
+  border-top: 1px solid var(--color-border, #2A2A2A);
 }
 
 .service-row {
@@ -166,7 +166,7 @@
   align-items: baseline;
   gap: clamp(16px, 2.5vw, 32px);
   padding: clamp(26px, 3.4vh, 36px) clamp(12px, 1.6vw, 20px); /* Enhanced vertical breathing room */
-  border-bottom: 1px solid rgba(222, 215, 201, 0.75);
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
   background-color: transparent;
   text-decoration: none;
   color: inherit;
@@ -184,9 +184,9 @@
   }
 }
 
-/* Subtle warm ivory tint on hover */
+/* Subtle dark gold tint on hover */
 .service-row:hover {
-  background-color: rgba(184, 148, 85, 0.028);
+  background-color: rgba(184, 155, 94, 0.05);
 }
 
 /* Left number indicator in its own column */
@@ -194,14 +194,14 @@
   font-family: var(--font-serif, 'Cormorant Garamond', serif);
   font-size: clamp(1.3rem, 1.8vw, 1.6rem);
   font-weight: 500;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   line-height: 1.1;
   transition: color 0.4s ease;
   letter-spacing: -0.01em;
 }
 
 .service-row:hover .service-number {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 /* Center title & description */
@@ -228,7 +228,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   line-height: 1.2;
 }
 
@@ -237,7 +237,7 @@
   font-size: clamp(13px, 0.95vw, 14.5px);
   font-weight: 400;
   line-height: 1.62;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   letter-spacing: 0.01em;
   max-width: 580px;
 }
@@ -249,7 +249,7 @@
   justify-content: flex-end;
   align-self: center;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.4s ease;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
 }
 
 @media (max-width: 640px) {
@@ -267,7 +267,7 @@
 
 .service-row:hover .service-arrow-wrap {
   transform: translateX(6px); /* Subtle 6px forward shift */
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 /* --------------------------------------------------
@@ -281,7 +281,7 @@
   text-align: center;
   gap: 16px;
   padding-top: clamp(36px, 5vh, 56px);
-  border-top: 1px solid rgba(222, 215, 201, 0.6);
+  border-top: 1px solid var(--color-border, #2A2A2A);
 }
 
 .services-statement {
@@ -289,7 +289,7 @@
   font-size: clamp(1.35rem, 2.2vw, 1.95rem);
   font-weight: 500;
   font-style: italic;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   letter-spacing: 0.01em;
   max-width: 680px;
 }
@@ -303,7 +303,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   text-decoration: none;
   padding-bottom: 5px;
   position: relative;
@@ -317,7 +317,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   transform-origin: left center;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -326,11 +326,11 @@
   display: inline-block;
   font-size: 14px;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .services-cta-link:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .services-cta-link:hover .services-cta-arrow {

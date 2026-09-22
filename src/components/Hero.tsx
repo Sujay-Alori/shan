@@ -497,7 +497,7 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Statistics Group */}
         <div ref={statsRef} className="hero-stats-group">
           <div className="stat-item">
-            <span className="stat-number">08+</span>
+            <span className="stat-number">11+</span>
             <span className="stat-label">YEARS EXPERIENCE</span>
           </div>
           <div className="stat-item">

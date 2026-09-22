@@ -1,12 +1,14 @@
 :root {
+  --color-bg: #0B0B0B;
+  --color-bg-secondary: #111111;
+  --color-surface: #151515;
+  --color-primary: #F5F1E8;
+  --color-secondary: #B8B3A8;
+  --color-gold: #B89B5E;
+  --color-gold-hover: #D4B574;
+  --color-border: #2A2A2A;
   --color-ivory: #F5F1E8;
-  --color-bg: #F5F1E8;
-  --color-primary: #171714;
-  --color-secondary: #5B5851;
-  --color-gold: #B89455;
-  --color-gold-hover: #9E7D42;
-  --color-border: #DED7C9;
-  --color-white: #FFFFFF;
+  --color-white: #0B0B0B;
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

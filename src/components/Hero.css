@@ -10,8 +10,8 @@
   height: 100vh;
   height: 100dvh;
   max-height: 100vh;
-  background-color: var(--color-ivory, #F5F1E8);
-  color: var(--color-primary, #171714);
+  background-color: var(--color-bg, #0B0B0B);
+  color: var(--color-primary, #F5F1E8);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,7 +40,7 @@
   justify-content: space-between;
   z-index: 20;
   padding-bottom: clamp(10px, 1.4vh, 16px);
-  border-bottom: 1px solid rgba(222, 215, 201, 0.45);
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
 }
 
 .hero-logo-link {
@@ -88,7 +88,7 @@
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   text-decoration: none;
   position: relative;
   padding: 4px 0;
@@ -105,12 +105,12 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .hero-nav-item:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .hero-nav-item:hover::after {
@@ -134,7 +134,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   display: inline-block;
 }
 
@@ -144,13 +144,13 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: var(--color-bg, #F5F1E8);
-  border-bottom: 1px solid var(--color-border, #DED7C9);
+  background-color: var(--color-bg-secondary, #111111);
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
   padding: 24px clamp(20px, 4vw, 40px);
   display: flex;
   flex-direction: column;
   gap: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   z-index: 100;
   animation: mobileMenuFade 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -181,14 +181,14 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   text-align: left;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .mobile-nav-link:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .mobile-menu-footer {
@@ -196,17 +196,17 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 14px;
-  border-top: 1px solid var(--color-border, #DED7C9);
+  border-top: 1px solid var(--color-border, #2A2A2A);
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 11px;
 }
 
 .mobile-menu-location {
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
 }
 
 .mobile-menu-phone {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   text-decoration: none;
   font-weight: 700;
 }
@@ -262,14 +262,14 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   margin-bottom: clamp(10px, 1.4vh, 16px);
 }
 
 .hero-eyebrow-dash {
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
 }
 
 /* Heading: Cormorant Garamond Stacked */
@@ -279,7 +279,7 @@
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.02em;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   margin-bottom: clamp(12px, 1.6vh, 20px);
 }
 
@@ -295,7 +295,7 @@
 }
 
 .heading-gold-italic {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   font-style: italic;
   font-weight: 500;
 }
@@ -314,7 +314,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
 }
 
 .hero-philosophy {
@@ -322,7 +322,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   letter-spacing: 0.01em;
 }
 
@@ -332,53 +332,48 @@
 
 /* Minimal Architectural CTA */
 .hero-cta-wrap {
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .hero-cta-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  background-color: #000000;
+  color: var(--color-primary, #F5F1E8);
+  border: 1px solid var(--color-gold, #B89B5E);
+  padding: 12px 24px;
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
   text-decoration: none;
-  padding-bottom: 5px;
+  cursor: pointer;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hero-cta-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--color-gold, #B89455);
-  transform-origin: left center;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  display: none;
 }
 
 .hero-cta-arrow {
   display: inline-block;
   font-size: 14px;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .hero-cta-link:hover {
-  color: var(--color-gold, #B89455);
+  background-color: #111111;
+  border-color: var(--color-gold-hover, #D4B574);
+  color: var(--color-primary, #F5F1E8);
 }
 
 .hero-cta-link:hover .hero-cta-arrow {
-  transform: translateX(5px);
-}
-
-.hero-cta-link:hover .hero-cta-line {
-  transform: scaleX(1.08);
+  transform: translateX(4px);
+  color: var(--color-gold-hover, #D4B574);
 }
 
 /* --------------------------------------------------
@@ -474,7 +469,7 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   opacity: 0.75;
 }
 
@@ -484,7 +479,7 @@
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   opacity: 0.85;
 }
 
@@ -499,7 +494,7 @@
   justify-content: space-between;
   z-index: 20;
   padding-top: clamp(8px, 1.4vh, 14px);
-  border-top: 1px solid rgba(222, 215, 201, 0.45);
+  border-top: 1px solid var(--color-border, #2A2A2A);
 }
 
 @media (max-width: 768px) {
@@ -535,7 +530,7 @@
   font-size: clamp(2rem, 3.4vw, 2.85rem);
   font-weight: 600;
   line-height: 1;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   letter-spacing: -0.02em;
 }
 
@@ -545,7 +540,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   margin-top: 4px;
 }
 
@@ -568,7 +563,7 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -578,7 +573,7 @@
 .scroll-line-wrap {
   width: 1px;
   height: 28px;
-  background-color: var(--color-border, #DED7C9);
+  background-color: var(--color-border, #2A2A2A);
   position: relative;
   overflow: hidden;
 }
@@ -589,7 +584,7 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   animation: scrollPulse 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
@@ -606,5 +601,5 @@
 }
 
 .hero-scroll-indicator:hover .scroll-text {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }

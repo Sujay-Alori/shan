@@ -7,12 +7,12 @@
 .projects-section {
   position: relative;
   width: 100%;
-  background-color: var(--color-ivory, #F5F1E8);
-  color: var(--color-primary, #171714);
+  background-color: var(--color-bg, #0B0B0B);
+  color: var(--color-primary, #F5F1E8);
   padding: clamp(80px, 11vh, 150px) clamp(24px, 4vw, 56px);
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 1px solid var(--color-border, #DED7C9);
+  border-top: 1px solid var(--color-border, #2A2A2A);
 }
 
 /* Ambient decorative architectural watermark & blueprint grid */
@@ -23,10 +23,10 @@
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(to right, rgba(222, 215, 201, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(222, 215, 201, 0.25) 1px, transparent 1px);
+    linear-gradient(to right, rgba(42, 42, 42, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 42, 42, 0.45) 1px, transparent 1px);
   background-size: 80px 80px;
-  opacity: 0.25;
+  opacity: 0.35;
   pointer-events: none;
 }
 
@@ -38,8 +38,8 @@
   font-size: clamp(200px, 28vw, 360px);
   font-weight: 600;
   line-height: 1;
-  color: var(--color-primary, #171714);
-  opacity: 0.018;
+  color: var(--color-primary, #F5F1E8);
+  opacity: 0.02;
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -65,7 +65,7 @@
   align-items: flex-end;
   gap: clamp(32px, 5vw, 64px);
   padding-bottom: clamp(24px, 3.5vh, 36px);
-  border-bottom: 1px solid rgba(222, 215, 201, 0.7);
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
 }
 
 @media (max-width: 860px) {
@@ -91,14 +91,14 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   margin-bottom: clamp(12px, 1.8vh, 18px);
 }
 
 .projects-eyebrow-dash {
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
 }
 
 .projects-heading {
@@ -107,7 +107,7 @@
   font-weight: 600;
   line-height: 0.96;
   letter-spacing: -0.015em;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   margin: 0;
 }
 
@@ -127,7 +127,7 @@
   font-size: clamp(14px, 1vw, 15.5px);
   font-weight: 400;
   line-height: 1.65;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   letter-spacing: 0.01em;
   max-width: 440px;
   margin: 0;
@@ -164,7 +164,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   cursor: pointer;
   position: relative;
   transition: color 0.3s ease;
@@ -177,16 +177,16 @@
   left: 0;
   width: 0;
   height: 1.5px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .filter-btn:hover {
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
 }
 
 .filter-btn.active {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .filter-btn.active::after {
@@ -252,13 +252,13 @@
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   margin: 0;
   transition: color 0.3s ease;
 }
 
 .project-card:hover .project-title {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .project-meta-line {
@@ -271,11 +271,11 @@
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
 }
 
 .meta-sep {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   opacity: 0.8;
   font-weight: 400;
 }
@@ -285,8 +285,8 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: #EDE8DC;
-  border: 1px solid rgba(222, 215, 201, 0.6);
+  background-color: #151515;
+  border: 1px solid var(--color-border, #2A2A2A);
   box-sizing: border-box;
 }
 
@@ -340,7 +340,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(23, 23, 20, 0.04);
+  background-color: rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -355,7 +355,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  border-color: rgba(184, 148, 85, 0.5);
+  border-color: rgba(184, 155, 94, 0.45);
   border-style: solid;
   pointer-events: none;
   z-index: 3;
@@ -382,19 +382,19 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   transition: color 0.3s ease;
 }
 
 .view-project-arrow {
   display: inline-block;
   font-size: 13px;
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card:hover .view-project-link {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .project-card:hover .view-project-arrow {
@@ -421,7 +421,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   text-decoration: none;
   padding-bottom: 5px;
   position: relative;
@@ -435,7 +435,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-gold, #B89455);
+  background-color: var(--color-gold, #B89B5E);
   transform-origin: left center;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -444,11 +444,11 @@
   display: inline-block;
   font-size: 14px;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .projects-cta-link:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89B5E);
 }
 
 .projects-cta-link:hover .projects-cta-arrow {

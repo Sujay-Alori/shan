@@ -1,6 +1,6 @@
 /* ==================================================
-   PROJECT PREVIEW MODAL
-   Editorial Architectural Details Modal
+   PROJECT PREVIEW MODAL / CARD DETAIL VIEW
+   Editorial Architectural Details Modal (Premium Black)
 ================================================== */
 
 .project-modal-backdrop {
@@ -10,14 +10,14 @@
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background-color: rgba(23, 23, 20, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(16px, 3vh, 36px);
+  padding: clamp(12px, 2.5vh, 28px);
   box-sizing: border-box;
   animation: modalFadeIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -30,14 +30,14 @@
 .project-modal-card {
   position: relative;
   width: 100%;
-  max-width: 960px;
-  max-height: 90vh;
-  background-color: var(--color-ivory, #F5F1E8);
-  border: 1px solid var(--color-border, #DED7C9);
+  max-width: 860px;
+  max-height: 92vh;
+  background-color: var(--color-surface, #151515);
+  border: 1px solid var(--color-border, #2A2A2A);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 24px 60px -12px rgba(23, 23, 20, 0.3);
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.85);
   animation: modalSlideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -52,44 +52,101 @@
   }
 }
 
+/* --------------------------------------------------
+   1. TOP BAR (NUMBER / CATEGORY & CLOSE ICON)
+-------------------------------------------------- */
+.project-modal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
+  background-color: #111111;
+  z-index: 10;
+}
+
+@media (max-width: 600px) {
+  .project-modal-topbar {
+    padding: 12px 18px;
+  }
+}
+
+.project-modal-topbar-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.project-modal-top-number {
+  color: var(--color-gold, #B89B5E);
+}
+
+.project-modal-top-sep {
+  color: var(--color-border, #2A2A2A);
+  opacity: 0.8;
+}
+
+.project-modal-top-category {
+  color: var(--color-secondary, #B8B3A8);
+}
+
 .project-modal-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-border, #DED7C9);
-  color: var(--color-primary, #171714);
+  background-color: #151515;
+  border: 1px solid var(--color-border, #2A2A2A);
+  color: var(--color-primary, #F5F1E8);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  font-size: 13px;
   transition: all 0.25s ease;
+  padding: 0;
+  line-height: 1;
 }
 
 .project-modal-close-btn:hover {
-  background-color: var(--color-gold, #B89455);
-  border-color: var(--color-gold, #B89455);
-  color: #FFFFFF;
+  background-color: var(--color-gold, #B89B5E);
+  border-color: var(--color-gold, #B89B5E);
+  color: #0B0B0B;
   transform: rotate(90deg);
 }
 
+/* --------------------------------------------------
+   2. SCROLLABLE BODY
+-------------------------------------------------- */
 .project-modal-scroll-body {
   overflow-y: auto;
-  max-height: calc(90vh - 2px);
+  max-height: calc(92vh - 60px);
   display: flex;
   flex-direction: column;
 }
 
+/* --------------------------------------------------
+   3. LARGE PROJECT HERO IMAGE
+-------------------------------------------------- */
 .project-modal-hero-media {
   width: 100%;
-  height: clamp(260px, 45vh, 440px);
-  background-color: #EDE8DC;
+  aspect-ratio: 16 / 9.5;
+  max-height: 440px;
+  background-color: #0B0B0B;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
+}
+
+@media (max-width: 600px) {
+  .project-modal-hero-media {
+    aspect-ratio: 16 / 11;
+    max-height: none;
+  }
 }
 
 .project-modal-img {
@@ -100,114 +157,169 @@
   display: block;
 }
 
+/* --------------------------------------------------
+   4. CONTENT BODY
+-------------------------------------------------- */
 .project-modal-content {
-  padding: clamp(24px, 4vh, 44px) clamp(24px, 4vw, 48px);
+  padding: clamp(20px, 3.5vh, 36px) clamp(20px, 3.5vw, 36px);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(18px, 2.5vh, 26px);
 }
 
+/* Title & Status Badge Header */
 .project-modal-header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  border-bottom: 1px solid var(--color-border, #DED7C9);
-  padding-bottom: 20px;
+  gap: 12px;
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
+  padding-bottom: clamp(14px, 2vh, 20px);
 }
 
-.project-modal-eyebrow {
+.project-modal-title-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
-  font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-gold, #B89455);
-}
-
-.project-modal-status-badge {
-  padding: 3px 8px;
-  background-color: rgba(184, 148, 85, 0.1);
-  border: 1px solid rgba(184, 148, 85, 0.3);
-  color: var(--color-gold, #B89455);
-  font-size: 9.5px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
 }
 
 .project-modal-title {
-  font-family: var(--font-serif, 'Cormorant Garamond', serif);
-  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
   font-weight: 600;
   line-height: 1.05;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   letter-spacing: -0.015em;
   margin: 0;
 }
 
-.project-modal-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--color-border, #DED7C9);
+.project-modal-status-badge {
+  padding: 4px 10px;
+  background-color: rgba(184, 155, 94, 0.12);
+  border: 1px solid rgba(184, 155, 94, 0.4);
+  color: var(--color-gold, #B89B5E);
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: 2px;
 }
 
-@media (max-width: 600px) {
+/* --------------------------------------------------
+   5. CLEAN 2-COLUMN PROJECT DETAILS LAYOUT
+-------------------------------------------------- */
+.project-modal-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 2vh, 20px) clamp(20px, 3vw, 36px);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border, #2A2A2A);
+}
+
+@media (max-width: 540px) {
   .project-modal-meta-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 14px;
   }
 }
 
 .modal-meta-item {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
 
 .modal-meta-label {
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
 }
 
 .modal-meta-value {
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--color-primary, #171714);
-  margin-top: 4px;
+  color: var(--color-primary, #F5F1E8);
+  line-height: 1.35;
 }
 
+/* Description */
 .project-modal-desc {
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 15px;
+  font-size: clamp(13.5px, 0.95vw, 15px);
   font-weight: 400;
   line-height: 1.68;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #B8B3A8);
   letter-spacing: 0.01em;
   margin: 0;
 }
 
+/* Scope / Services Tags */
 .project-modal-services-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .modal-service-tag {
-  padding: 6px 14px;
-  background-color: #FAF8F2;
-  border: 1px solid var(--color-border, #DED7C9);
+  padding: 5px 12px;
+  background-color: #111111;
+  border: 1px solid var(--color-border, #2A2A2A);
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
+}
+
+/* --------------------------------------------------
+   6. FULL-WIDTH OUTLINED INQUIRY BUTTON
+-------------------------------------------------- */
+.project-modal-action-wrap {
+  width: 100%;
+  padding-top: 6px;
+}
+
+.project-modal-inquire-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 24px;
+  background-color: transparent;
+  color: var(--color-primary, #F5F1E8);
+  border: 1px solid var(--color-gold, #B89B5E);
+  font-family: var(--font-sans, 'Manrope', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.inquire-arrow {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--color-gold, #B89B5E);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-modal-inquire-btn:hover {
+  background-color: var(--color-gold, #B89B5E);
+  color: #0B0B0B;
+}
+
+.project-modal-inquire-btn:hover .inquire-arrow {
+  transform: translateX(5px);
+  color: #0B0B0B;
 }

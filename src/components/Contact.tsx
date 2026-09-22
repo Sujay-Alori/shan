@@ -132,11 +132,11 @@ export const Contact: React.FC = () => {
             {/* Primary Action Buttons */}
             <div ref={ctaGroupRef} className="contact-actions">
               <a
-                href="https://wa.me/919645900011"
+                href="https://wa.me/919633980012"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-btn contact-btn--primary"
-                aria-label="Call or WhatsApp Shan Arch Studio at +91 96459 00011"
+                aria-label="Call or WhatsApp Shan Arch Studio at +91 96339 80012"
               >
                 <span>CALL / WHATSAPP</span>
                 <span className="btn-arrow" aria-hidden="true">
@@ -145,9 +145,9 @@ export const Contact: React.FC = () => {
               </a>
 
               <a
-                href="mailto:shanitlr@gmail.com"
+                href="mailto:shanarchstudio0011@gmail.com"
                 className="contact-btn contact-btn--secondary"
-                aria-label="Email Shan Arch Studio at shanitlr@gmail.com"
+                aria-label="Email Shan Arch Studio at shanarchstudio0011@gmail.com"
               >
                 <span>EMAIL</span>
                 <span className="btn-arrow" aria-hidden="true">
@@ -213,12 +213,12 @@ export const Contact: React.FC = () => {
 
                 {/* Email */}
                 <a
-                  href="mailto:shanitlr@gmail.com"
+                  href="mailto:shanarchstudio0011@gmail.com"
                   className="contact-text-link"
                 >
                   <span className="contact-link-label">EMAIL</span>
                   <span className="contact-link-val">
-                    <span>shanitlr@gmail.com</span>
+                    <span>shanarchstudio0011@gmail.com</span>
                     <span className="link-arrow" aria-hidden="true">
                       ↗
                     </span>
