@@ -1,17 +1,17 @@
 /* ==================================================
    SHAN ARCH STUDIO - DEDICATED MINIMAL PREMIUM FOOTER
-   Aesthetic: Architectural Editorial Typography
-   Palette: Ivory (#F5F1E8), Charcoal (#171714), Gold (#B89455), Stone (#5B5851), Border (#DED7C9)
+   Aesthetic: Architectural Editorial Typography - Black Edition
+   Palette: Black (#0D0D0D), Charcoal (#141413), Ivory (#F5F1E8), Gold (#C5A059), Stone (#9E9A90)
 ================================================== */
 
 .studio-footer {
   position: relative;
   width: 100%;
-  background-color: var(--color-bg, #F5F1E8);
-  color: var(--color-primary, #171714);
+  background-color: var(--color-bg, #0D0D0D);
+  color: var(--color-primary, #F5F1E8);
   padding: clamp(60px, 8vh, 90px) clamp(24px, 4vw, 56px) clamp(32px, 4vh, 48px);
   box-sizing: border-box;
-  border-top: 1px solid var(--color-border, #DED7C9);
+  border-top: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
 }
 
 .footer-container {
@@ -59,7 +59,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   margin: 0;
 }
 
@@ -69,7 +69,7 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #C5A059);
 }
 
 /* Common Column Headers */
@@ -79,7 +79,7 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #9E9A90);
   margin-bottom: 16px;
 }
 
@@ -102,7 +102,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   cursor: pointer;
   text-align: left;
   transition: color 300ms ease;
@@ -110,7 +110,7 @@
 }
 
 .footer-link-btn:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #C5A059);
 }
 
 .footer-ext-link {
@@ -122,23 +122,23 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   text-decoration: none;
   transition: color 300ms ease;
 }
 
 .footer-arrow {
   font-size: 11px;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #9E9A90);
   transition: transform 300ms ease, color 300ms ease;
 }
 
 .footer-ext-link:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #C5A059);
 }
 
 .footer-ext-link:hover .footer-arrow {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #C5A059);
   transform: translate(2px, -2px);
 }
 
@@ -153,20 +153,20 @@
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 13px;
   font-weight: 600;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   text-decoration: none;
   transition: color 300ms ease;
 }
 
 .footer-contact-link:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #C5A059);
 }
 
 .footer-location-text {
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 13px;
   font-weight: 500;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #9E9A90);
 }
 
 /* --------------------------------------------------
@@ -175,7 +175,7 @@
 .footer-divider-line {
   width: 100%;
   height: 1px;
-  background-color: var(--color-border, #DED7C9);
+  background-color: var(--color-border, rgba(245, 241, 232, 0.08));
 }
 
 /* --------------------------------------------------
@@ -195,7 +195,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-secondary, #5B5851);
+  color: var(--color-secondary, #9E9A90);
   margin: 0;
 }
 
@@ -211,13 +211,13 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-primary, #171714);
+  color: var(--color-primary, #F5F1E8);
   cursor: pointer;
   transition: color 300ms ease;
 }
 
 .footer-back-to-top:hover {
-  color: var(--color-gold, #B89455);
+  color: var(--color-gold, #C5A059);
 }
 
 @media (max-width: 600px) {

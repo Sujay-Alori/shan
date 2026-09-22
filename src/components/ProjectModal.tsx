@@ -24,6 +24,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
   if (!project) return null;
 
+  const handleInquire = () => {
+    onClose();
+    const contactEl = document.getElementById('contact');
+    if (contactEl) {
+      contactEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Primary category display (e.g. RESIDENTIAL, INTERIOR, EXTERIOR, COMMERCIAL)
+  const primaryCategory =
+    project.categories && project.categories.length > 0
+      ? project.categories.find(
+          (c) => c !== 'COMPLETED' && c !== 'ONGOING'
+        ) || project.categories[0]
+      : 'ARCHITECTURE';
+
   return (
     <div
       className="project-modal-backdrop"
@@ -36,17 +52,26 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
         className="project-modal-card"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          type="button"
-          className="project-modal-close-btn"
-          onClick={onClose}
-          aria-label="Close Project Details"
-        >
-          ✕
-        </button>
+        {/* Top Header: Project Number + Category + Close (×) Button */}
+        <div className="project-modal-top-bar">
+          <div className="project-modal-top-meta">
+            <span className="project-modal-top-num">{project.number}</span>
+            <span className="project-modal-top-sep" aria-hidden="true">/</span>
+            <span className="project-modal-top-category">{primaryCategory}</span>
+          </div>
+
+          <button
+            type="button"
+            className="project-modal-close-btn"
+            onClick={onClose}
+            aria-label="Close Project Details"
+          >
+            ✕
+          </button>
+        </div>
 
         <div className="project-modal-scroll-body">
-          {/* Hero Media */}
+          {/* Prominent Media Display Below Header */}
           <div className="project-modal-hero-media">
             <img
               src={project.image}
@@ -57,31 +82,41 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Project Details Content */}
           <div className="project-modal-content">
-            <div className="project-modal-header">
-              <div className="project-modal-eyebrow">
-                <span>{project.number} — {project.type}</span>
-                <span className="project-modal-status-badge">{project.status}</span>
-              </div>
+            {/* Title & Status Badge */}
+            <div className="project-modal-title-row">
               <h2 className="project-modal-title">{project.title}</h2>
+              <span className={`project-modal-status-badge status-${project.status.toLowerCase()}`}>
+                {project.status}
+              </span>
             </div>
 
-            <div className="project-modal-meta-grid">
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">Location</span>
-                <span className="modal-meta-value">{project.location}</span>
-              </div>
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">Area</span>
-                <span className="modal-meta-value">{project.area}</span>
-              </div>
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">Timeline</span>
-                <span className="modal-meta-value">{project.year || '2024'} • {project.status}</span>
-              </div>
-            </div>
-
+            {/* Description */}
             <p className="project-modal-desc">{project.description}</p>
 
+            {/* Clean Architectural 4-Point Metadata Grid */}
+            <div className="project-modal-meta-grid">
+              <div className="modal-meta-item">
+                <span className="modal-meta-label">CATEGORY</span>
+                <span className="modal-meta-value">{project.categories.join(' / ')}</span>
+              </div>
+
+              <div className="modal-meta-item">
+                <span className="modal-meta-label">DISCIPLINE / PROJECT TYPE</span>
+                <span className="modal-meta-value">{project.type}</span>
+              </div>
+
+              <div className="modal-meta-item">
+                <span className="modal-meta-label">LOCATION</span>
+                <span className="modal-meta-value">{project.location}</span>
+              </div>
+
+              <div className="modal-meta-item">
+                <span className="modal-meta-label">PRACTICE</span>
+                <span className="modal-meta-value">Shan Arch Studio</span>
+              </div>
+            </div>
+
+            {/* Services Tags (if available) */}
             {project.services && project.services.length > 0 && (
               <div className="project-modal-services-list">
                 {project.services.map((srv, idx) => (
@@ -91,6 +126,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 ))}
               </div>
             )}
+
+            {/* Bordered CTA: INQUIRE ABOUT THIS PROJECT → */}
+            <div className="project-modal-action-row">
+              <button
+                type="button"
+                className="project-modal-inquire-btn"
+                onClick={handleInquire}
+              >
+                <span>INQUIRE ABOUT THIS PROJECT</span>
+                <span className="btn-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
