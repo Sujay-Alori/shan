@@ -1,19 +1,18 @@
 /* ==================================================
    SHAN ARCH STUDIO - ABOUT / FOUNDER SECTION
-   Aesthetic: Editorial Architecture Magazine Spread - Black Edition
-   Palette: Black (#0D0D0D), Charcoal (#141413), Ivory (#F5F1E8), Gold (#C5A059), Stone (#9E9A90)
+   Aesthetic: Editorial Architecture Magazine Spread
+   Palette: Ivory (#F5F1E8), Charcoal (#171714), Gold (#B89455), Stone (#5B5851), Border (#DED7C9)
 ================================================== */
 
 .about-section {
   position: relative;
   width: 100%;
-  max-width: 100%;
-  background-color: var(--color-bg, #0D0D0D);
-  color: var(--color-primary, #F5F1E8);
-  padding: clamp(64px, 9vh, 120px) clamp(20px, 4vw, 56px);
+  background-color: var(--color-ivory, #F5F1E8);
+  color: var(--color-primary, #171714);
+  padding: clamp(80px, 10vh, 140px) clamp(24px, 4vw, 56px);
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  border-top: 1px solid var(--color-border, #DED7C9);
 }
 
 .about-container {
@@ -21,7 +20,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(56px, 8vh, 100px);
+  gap: clamp(72px, 10vh, 120px);
 }
 
 /* --------------------------------------------------
@@ -31,13 +30,13 @@
   display: grid;
   grid-template-columns: 1.25fr 0.85fr;
   align-items: flex-start;
-  gap: clamp(36px, 5.5vw, 80px);
+  gap: clamp(40px, 6vw, 90px);
 }
 
 @media (max-width: 900px) {
   .studio-intro-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
 }
 
@@ -58,31 +57,30 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
-  margin-bottom: clamp(10px, 1.6vh, 16px);
+  color: var(--color-secondary, #5B5851);
+  margin-bottom: clamp(14px, 2vh, 22px);
 }
 
 .about-eyebrow-dash {
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold, #C5A059);
+  background-color: var(--color-gold, #B89455);
 }
 
 .studio-heading {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
-  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
   font-weight: 600;
-  line-height: 0.98;
+  line-height: 0.96;
   letter-spacing: -0.02em;
-  color: var(--color-primary, #F5F1E8);
-  margin-bottom: clamp(20px, 3vh, 32px);
-  word-break: break-word;
+  color: var(--color-primary, #171714);
+  margin-bottom: clamp(24px, 3.5vh, 36px);
 }
 
 .heading-line-mask {
   display: block;
   overflow: hidden;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 }
 
 .heading-line {
@@ -93,16 +91,16 @@
 .studio-description-wrap {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: clamp(24px, 3.5vh, 36px);
+  gap: 18px;
+  margin-bottom: clamp(28px, 4vh, 40px);
 }
 
 .studio-description-text {
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: clamp(14px, 1.05vw, 16px);
+  font-size: clamp(15px, 1.1vw, 16.5px);
   font-weight: 400;
   line-height: 1.68;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   letter-spacing: 0.01em;
 }
 
@@ -111,11 +109,11 @@
   align-items: center;
   gap: 10px;
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   text-decoration: none;
   padding-bottom: 5px;
   position: relative;
@@ -129,7 +127,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-gold, #C5A059);
+  background-color: var(--color-gold, #B89455);
   transform-origin: left center;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -138,11 +136,11 @@
   display: inline-block;
   font-size: 14px;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .studio-approach-link:hover {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .studio-approach-link:hover .studio-approach-arrow {
@@ -153,25 +151,25 @@
   transform: scaleX(1.08);
 }
 
-/* Right Column: Typographic Statistics Area */
+/* Right Column: Typographic Statistics Area (No Boxes, Pure Editorial) */
 .studio-stats-column {
   display: flex;
   flex-direction: column;
-  gap: clamp(32px, 4.5vh, 48px);
+  gap: clamp(36px, 5vh, 52px);
   padding-left: clamp(0px, 3vw, 40px);
-  border-left: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  border-left: 1px solid rgba(222, 215, 201, 0.6);
 }
 
 @media (max-width: 900px) {
   .studio-stats-column {
     border-left: none;
-    border-top: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+    border-top: 1px solid rgba(222, 215, 201, 0.6);
     padding-left: 0;
-    padding-top: 28px;
+    padding-top: 36px;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 28px;
-    justify-content: flex-start;
+    gap: 36px;
+    justify-content: space-between;
   }
 }
 
@@ -182,129 +180,137 @@
 
 .about-stat-number {
   font-family: var(--font-serif, 'Cormorant Garamond', serif);
-  font-size: clamp(2.6rem, 4.4vw, 3.8rem);
+  font-size: clamp(3rem, 5vw, 4.2rem);
   font-weight: 600;
   line-height: 0.95;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   letter-spacing: -0.02em;
 }
 
 .about-stat-label {
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   margin-top: 8px;
 }
 
-/* --------------------------------------------------
-   ARCHITECTURAL DIVIDER LINE
--------------------------------------------------- */
-.about-divider-line {
-  width: 100%;
-  height: 1px;
-  background-color: var(--color-border, rgba(245, 241, 232, 0.08));
+.about-stat-accent-text {
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-gold, #B89455);
+  letter-spacing: -0.01em;
 }
 
 /* --------------------------------------------------
-   PART 2 — FOUNDER PROFILE
+   ARCHITECTURAL SECTION DIVIDER
 -------------------------------------------------- */
-.founder-profile-grid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.25fr;
-  align-items: center;
-  gap: clamp(40px, 6vw, 88px);
-}
-
-@media (max-width: 900px) {
-  .founder-profile-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-/* Founder Portrait */
-.founder-image-column {
-  position: relative;
+.about-divider-wrap {
   width: 100%;
-}
-
-.founder-image-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 3.5 / 4.4;
-  background-color: var(--color-surface, #141413);
-  border: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
-  padding: clamp(10px, 1.8vw, 16px);
-  box-sizing: border-box;
-}
-
-.founder-image-inner {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.founder-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  image-orientation: from-image;
-  display: block;
-  filter: grayscale(15%) contrast(102%);
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
-}
-
-.founder-image-wrap:hover .founder-img {
-  transform: scale(1.025);
-  filter: grayscale(0%) contrast(105%);
-}
-
-.founder-corner {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-color: rgba(197, 160, 89, 0.5);
-  border-style: solid;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.f-corner-tl { top: 6px; left: 6px; border-width: 1px 0 0 1px; }
-.f-corner-tr { top: 6px; right: 6px; border-width: 1px 1px 0 0; }
-.f-corner-bl { bottom: 6px; left: 6px; border-width: 0 0 1px 1px; }
-.f-corner-br { bottom: 6px; right: 6px; border-width: 0 1px 1px 0; }
-
-.founder-image-caption {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 440px;
-  margin-top: 10px;
-  font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  position: relative;
+}
+
+.about-divider-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(222, 215, 201, 0.65);
+}
+
+.about-divider-symbol {
+  padding: 0 20px;
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: 14px;
+  color: var(--color-gold, #B89455);
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
 }
 
-.caption-gold {
-  color: var(--color-gold, #C5A059);
+/* --------------------------------------------------
+   PART 2 — FOUNDER PROFILE (SHAN TIRUR)
+   Refined Architectural Studio Editorial Section
+-------------------------------------------------- */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr; /* Image ~45% of section width */
+  align-items: center; /* Vertically centered text */
+  gap: clamp(44px, 6vw, 84px);
 }
 
-/* Founder Narrative */
-.founder-narrative-column {
+@media (max-width: 900px) {
+  .founder-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+}
+
+/* Left: Large Vertical Portrait with subtle ivory frame */
+.founder-image-mount {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 10px;
+  background-color: #F9F6EE; /* Subtle ivory framing */
+  border: 1px solid #E2DCD0; /* Delicate architectural border */
+  box-shadow: none; /* No drop shadow */
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .founder-image-mount {
+    max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.founder-image-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5.2;
+  overflow: hidden;
+  background-color: #EDE8DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* 
+  Editorial photo treatment:
+  - 25% desaturation so red background is soft and muted
+  - Enhanced contrast & natural skin tones
+  - Clean rectangular portrait
+*/
+.founder-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: saturate(0.76) contrast(1.05) brightness(0.99);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  display: block;
+  will-change: transform;
+}
+
+.founder-image-inner:hover .founder-portrait-img {
+  transform: scale(1.025);
+}
+
+/* Right: Founder Details */
+.founder-content-right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 640px;
+  max-width: 580px;
 }
 
 .founder-eyebrow {
@@ -316,67 +322,76 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
-  margin-bottom: 8px;
+  color: var(--color-gold, #B89455);
+  margin-bottom: 12px;
 }
 
 .founder-name {
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
-  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(2.6rem, 4.4vw, 3.8rem);
   font-weight: 600;
-  line-height: 1;
+  line-height: 0.98;
   letter-spacing: -0.015em;
-  color: var(--color-primary, #F5F1E8);
-  margin: 0 0 6px 0;
+  color: var(--color-primary, #171714);
+  margin-bottom: 8px;
 }
 
-.founder-title-role {
+.founder-title {
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-gold, #C5A059);
-  margin: 0 0 20px 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-secondary, #5B5851);
+  margin-bottom: 20px;
 }
 
-.founder-sep-line {
-  width: 44px;
+.founder-gold-separator {
+  width: 48px;
   height: 1px;
-  background-color: var(--color-gold, #C5A059);
+  background-color: var(--color-gold, #B89455);
   margin-bottom: 24px;
 }
 
-.founder-bio-paragraphs {
+.founder-bio-wrap {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .founder-bio-text {
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: clamp(14px, 1.05vw, 15.5px);
+  font-size: clamp(14.5px, 1.05vw, 16px);
   font-weight: 400;
-  line-height: 1.68;
-  color: var(--color-secondary, #9E9A90);
+  line-height: 1.65;
+  color: var(--color-secondary, #5B5851);
   letter-spacing: 0.01em;
 }
 
-.founder-roles-grid {
+/* Bottom editorial credentials row */
+.founder-roles-list {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(222, 215, 201, 0.55);
+  width: 100%;
 }
 
-.founder-role-tag {
-  padding: 6px 14px;
-  border: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
-  background-color: var(--color-surface, #141413);
+.founder-role-item {
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 10.5px;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
+}
+
+.founder-role-separator {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-gold, #B89455);
+  display: inline-block;
 }

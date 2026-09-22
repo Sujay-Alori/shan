@@ -132,11 +132,11 @@ export const Contact: React.FC = () => {
             {/* Primary Action Buttons */}
             <div ref={ctaGroupRef} className="contact-actions">
               <a
-                href="https://wa.me/919633980012"
+                href="https://wa.me/919645900011"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-btn contact-btn--primary"
-                aria-label="Call or WhatsApp Shan Arch Studio at +91 96339 80012"
+                aria-label="Call or WhatsApp Shan Arch Studio at +91 96459 00011"
               >
                 <span>CALL / WHATSAPP</span>
                 <span className="btn-arrow" aria-hidden="true">
@@ -145,9 +145,9 @@ export const Contact: React.FC = () => {
               </a>
 
               <a
-                href="mailto:shanarchstudio0011@gmail.com"
+                href="mailto:shanitlr@gmail.com"
                 className="contact-btn contact-btn--secondary"
-                aria-label="Email Shan Arch Studio at shanarchstudio0011@gmail.com"
+                aria-label="Email Shan Arch Studio at shanitlr@gmail.com"
               >
                 <span>EMAIL</span>
                 <span className="btn-arrow" aria-hidden="true">
@@ -163,36 +163,6 @@ export const Contact: React.FC = () => {
             <div ref={connectBlockRef} className="contact-block">
               <h3 className="contact-block-title">CONNECT WITH US</h3>
               <div className="contact-links-grid">
-                {/* Phone 1 */}
-                <a
-                  href="https://wa.me/919633980012"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-text-link"
-                >
-                  <span className="contact-link-label">PHONE / WHATSAPP</span>
-                  <span className="contact-link-val">
-                    <span>+91 96339 80012</span>
-                    <span className="link-arrow" aria-hidden="true">
-                      ↗
-                    </span>
-                  </span>
-                </a>
-
-                {/* Phone 2 */}
-                <a
-                  href="tel:+919645900011"
-                  className="contact-text-link"
-                >
-                  <span className="contact-link-label">PHONE</span>
-                  <span className="contact-link-val">
-                    <span>+91 96459 00011</span>
-                    <span className="link-arrow" aria-hidden="true">
-                      ↗
-                    </span>
-                  </span>
-                </a>
-
                 {/* Instagram */}
                 <a
                   href="https://instagram.com/_shan_tirur_"
@@ -243,12 +213,12 @@ export const Contact: React.FC = () => {
 
                 {/* Email */}
                 <a
-                  href="mailto:shanarchstudio0011@gmail.com"
+                  href="mailto:shanitlr@gmail.com"
                   className="contact-text-link"
                 >
                   <span className="contact-link-label">EMAIL</span>
                   <span className="contact-link-val">
-                    <span>shanarchstudio0011@gmail.com</span>
+                    <span>shanitlr@gmail.com</span>
                     <span className="link-arrow" aria-hidden="true">
                       ↗
                     </span>

@@ -1,12 +1,9 @@
 .shanarch-app {
   width: 100%;
-  max-width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: var(--color-bg, #0D0D0D);
-  color: var(--color-primary, #F5F1E8);
+  background-color: var(--color-ivory, #F5F1E8);
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }

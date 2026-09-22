@@ -397,53 +397,11 @@ export const Hero: React.FC<HeroProps> = ({
                 CONTACT
               </button>
             </div>
-
-            <div className="mobile-menu-socials">
-              <span className="mobile-menu-subhead">SOCIAL</span>
-              <div className="mobile-social-links">
-                <a
-                  href="https://instagram.com/_shan_tirur_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mobile-social-link"
-                >
-                  <span>INSTAGRAM</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a
-                  href="https://youtube.com/user/shanitlr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mobile-social-link"
-                >
-                  <span>YOUTUBE</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a
-                  href="https://facebook.com/search/top?q=Shan%20Tirur"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mobile-social-link"
-                >
-                  <span>FACEBOOK</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-
             <div className="mobile-menu-footer">
-              <div className="mobile-contact-group">
-                <a href="https://wa.me/919633980012" target="_blank" rel="noopener noreferrer" className="mobile-menu-phone">
-                  +91 96339 80012
-                </a>
-                <a href="tel:+919645900011" className="mobile-menu-phone">
-                  +91 96459 00011
-                </a>
-                <a href="mailto:shanarchstudio0011@gmail.com" className="mobile-menu-email">
-                  shanarchstudio0011@gmail.com
-                </a>
-              </div>
               <span className="mobile-menu-location">Tirur, Kerala, India</span>
+              <a href="tel:+919645900011" className="mobile-menu-phone">
+                +91 96459 00011
+              </a>
             </div>
           </div>
         )}
@@ -539,7 +497,7 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Statistics Group */}
         <div ref={statsRef} className="hero-stats-group">
           <div className="stat-item">
-            <span className="stat-number">11+</span>
+            <span className="stat-number">08+</span>
             <span className="stat-label">YEARS EXPERIENCE</span>
           </div>
           <div className="stat-item">

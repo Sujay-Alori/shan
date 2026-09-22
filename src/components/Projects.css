@@ -1,19 +1,18 @@
 /* ==================================================
    SHAN ARCH STUDIO - PROJECTS / PORTFOLIO SECTION
-   Aesthetic: Editorial Architectural Studio Index - Black Edition
-   Palette: Black (#0D0D0D), Charcoal (#141413), Ivory (#F5F1E8), Gold (#C5A059), Stone (#9E9A90)
+   Aesthetic: Editorial Architectural Studio Index
+   Palette: Ivory (#F5F1E8), Charcoal (#171714), Gold (#B89455), Stone (#5B5851), Border (#DED7C9)
 ================================================== */
 
 .projects-section {
   position: relative;
   width: 100%;
-  max-width: 100%;
-  background-color: var(--color-bg, #0D0D0D);
-  color: var(--color-primary, #F5F1E8);
-  padding: clamp(64px, 9vh, 120px) clamp(20px, 4vw, 56px);
+  background-color: var(--color-ivory, #F5F1E8);
+  color: var(--color-primary, #171714);
+  padding: clamp(80px, 11vh, 150px) clamp(24px, 4vw, 56px);
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  border-top: 1px solid var(--color-border, #DED7C9);
 }
 
 /* Ambient decorative architectural watermark & blueprint grid */
@@ -24,8 +23,8 @@
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(to right, rgba(245, 241, 232, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(245, 241, 232, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(222, 215, 201, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(222, 215, 201, 0.25) 1px, transparent 1px);
   background-size: 80px 80px;
   opacity: 0.25;
   pointer-events: none;
@@ -36,11 +35,11 @@
   top: 6%;
   left: -2%;
   font-family: var(--font-serif, 'Cormorant Garamond', serif);
-  font-size: clamp(180px, 26vw, 340px);
+  font-size: clamp(200px, 28vw, 360px);
   font-weight: 600;
   line-height: 1;
-  color: #F5F1E8;
-  opacity: 0.02;
+  color: var(--color-primary, #171714);
+  opacity: 0.018;
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -54,7 +53,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(40px, 6vh, 64px);
+  gap: clamp(48px, 7vh, 80px);
 }
 
 /* --------------------------------------------------
@@ -64,16 +63,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: clamp(28px, 4vw, 56px);
-  padding-bottom: clamp(20px, 3vh, 30px);
-  border-bottom: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  gap: clamp(32px, 5vw, 64px);
+  padding-bottom: clamp(24px, 3.5vh, 36px);
+  border-bottom: 1px solid rgba(222, 215, 201, 0.7);
 }
 
 @media (max-width: 860px) {
   .projects-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    gap: 20px;
   }
 }
 
@@ -92,25 +91,24 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
-  margin-bottom: clamp(10px, 1.6vh, 16px);
+  color: var(--color-secondary, #5B5851);
+  margin-bottom: clamp(12px, 1.8vh, 18px);
 }
 
 .projects-eyebrow-dash {
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold, #C5A059);
+  background-color: var(--color-gold, #B89455);
 }
 
 .projects-heading {
   font-family: var(--font-serif, 'Cormorant Garamond', serif);
-  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+  font-size: clamp(2.6rem, 4.4vw, 3.8rem);
   font-weight: 600;
-  line-height: 0.98;
+  line-height: 0.96;
   letter-spacing: -0.015em;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   margin: 0;
-  word-break: break-word;
 }
 
 .heading-line-mask {
@@ -126,35 +124,34 @@
 
 .projects-supporting-text {
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: clamp(13.5px, 1vw, 15px);
+  font-size: clamp(14px, 1vw, 15.5px);
   font-weight: 400;
   line-height: 1.65;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   letter-spacing: 0.01em;
   max-width: 440px;
   margin: 0;
 }
 
 /* --------------------------------------------------
-   2. CATEGORY FILTERS
+   2. CATEGORY FILTERS (NO PILLS, ELEGANT TEXT NAVIGATION)
 -------------------------------------------------- */
 .projects-filters-wrap {
   width: 100%;
   overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
   padding-bottom: 6px;
-  -webkit-overflow-scrolling: touch;
 }
 
 .projects-filters-wrap::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .projects-filters-nav {
   display: inline-flex;
   align-items: center;
-  gap: clamp(16px, 2.5vw, 36px);
+  gap: clamp(20px, 3vw, 40px);
   min-width: max-content;
 }
 
@@ -163,11 +160,11 @@
   border: none;
   padding: 6px 0;
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   cursor: pointer;
   position: relative;
   transition: color 0.3s ease;
@@ -180,16 +177,16 @@
   left: 0;
   width: 0;
   height: 1.5px;
-  background-color: var(--color-gold, #C5A059);
+  background-color: var(--color-gold, #B89455);
   transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .filter-btn:hover {
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
 }
 
 .filter-btn.active {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .filter-btn.active::after {
@@ -202,18 +199,18 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(32px, 4.5vw, 56px) clamp(24px, 3.5vw, 44px);
+  gap: clamp(36px, 5vw, 64px) clamp(28px, 4vw, 52px);
   width: 100%;
 }
 
 @media (max-width: 860px) {
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 40px;
   }
 }
 
-/* Grid Spanning Classes */
+/* Grid Spanning Classes for Asymmetric Rhythm */
 .project-card.span-featured {
   grid-column: span 2;
 }
@@ -251,17 +248,17 @@
 
 .project-title {
   font-family: var(--font-serif, 'Cormorant Garamond', serif);
-  font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+  font-size: clamp(1.3rem, 1.8vw, 1.65rem);
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   margin: 0;
   transition: color 0.3s ease;
 }
 
 .project-card:hover .project-title {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .project-meta-line {
@@ -270,26 +267,26 @@
   gap: 8px;
   flex-wrap: wrap;
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
 }
 
 .meta-sep {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
   opacity: 0.8;
   font-weight: 400;
 }
 
-/* Image Frame */
+/* Image Frame [IMAGE PLACEHOLDER] */
 .project-media-wrap {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: var(--color-surface, #141413);
-  border: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  background-color: #EDE8DC;
+  border: 1px solid rgba(222, 215, 201, 0.6);
   box-sizing: border-box;
 }
 
@@ -327,7 +324,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  image-orientation: from-image;
   display: block;
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
@@ -344,7 +340,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(245, 241, 232, 0.03);
+  background-color: rgba(23, 23, 20, 0.04);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -359,7 +355,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  border-color: rgba(197, 160, 89, 0.5);
+  border-color: rgba(184, 148, 85, 0.5);
   border-style: solid;
   pointer-events: none;
   z-index: 3;
@@ -386,19 +382,19 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   transition: color 0.3s ease;
 }
 
 .view-project-arrow {
   display: inline-block;
   font-size: 13px;
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card:hover .view-project-link {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .project-card:hover .view-project-arrow {
@@ -421,11 +417,11 @@
   align-items: center;
   gap: 10px;
   font-family: var(--font-sans, 'Manrope', sans-serif);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   text-decoration: none;
   padding-bottom: 5px;
   position: relative;
@@ -439,7 +435,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-gold, #C5A059);
+  background-color: var(--color-gold, #B89455);
   transform-origin: left center;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -448,11 +444,11 @@
   display: inline-block;
   font-size: 14px;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .projects-cta-link:hover {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .projects-cta-link:hover .projects-cta-arrow {

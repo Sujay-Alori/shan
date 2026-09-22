@@ -221,7 +221,7 @@ export const About: React.FC = () => {
 
             <div ref={introDescRef} className="studio-description-wrap">
               <p className="studio-description-text">
-                Shan Arch Studio is a professional architectural design studio with 11+ years of experience in creating thoughtful, functional, and modern spaces.
+                Shan Arch Studio is a professional architectural design studio with 8+ years of experience in creating thoughtful, functional, and modern spaces.
               </p>
               <p className="studio-description-text">
                 With a growing portfolio of 2,000+ designs completed, we bring together creativity, practical planning, and attention to detail to create spaces that match our clients’ lifestyle, requirements, and budget.
@@ -248,7 +248,7 @@ export const About: React.FC = () => {
           {/* Right Column: Large Typographic Statistics (Pure Editorial) */}
           <div ref={statsRef} className="studio-stats-column">
             <div className="about-stat-item">
-              <span className="about-stat-number">11+</span>
+              <span className="about-stat-number">08+</span>
               <span className="about-stat-label">YEARS EXPERIENCE</span>
             </div>
 

@@ -1,18 +1,18 @@
 /* ==================================================
    SHAN ARCH STUDIO - CONTACT & CONNECT SECTION
-   Aesthetic: Minimal Luxury Architecture Studio Aesthetic - Black Edition
-   Palette: Black (#0D0D0D), Charcoal (#141413), Ivory (#F5F1E8), Gold (#C5A059), Stone (#9E9A90)
+   Aesthetic: Minimal Luxury Architecture Studio Aesthetic
+   Palette: Ivory (#F5F1E8), Charcoal (#171714), Gold (#B89455), Stone (#5B5851), Border (#DED7C9)
 ================================================== */
 
 .contact-section {
   position: relative;
   width: 100%;
-  background-color: var(--color-bg, #0D0D0D);
-  color: var(--color-primary, #F5F1E8);
+  background-color: var(--color-bg, #F5F1E8);
+  color: var(--color-primary, #171714);
   padding: clamp(64px, 8vh, 104px) clamp(24px, 4vw, 56px);
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  border-top: 1px solid var(--color-border, #DED7C9);
 }
 
 .contact-container {
@@ -53,14 +53,14 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   margin-bottom: clamp(10px, 1.5vh, 16px);
 }
 
 .contact-eyebrow-dash {
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold, #C5A059);
+  background-color: var(--color-gold, #B89455);
 }
 
 .contact-heading {
@@ -69,7 +69,7 @@
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.02em;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   margin-bottom: clamp(20px, 2.5vh, 28px);
 }
 
@@ -88,7 +88,7 @@
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: clamp(15px, 1.1vw, 17px);
   line-height: 1.65;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   max-width: 520px;
   margin-bottom: clamp(28px, 4vh, 40px);
 }
@@ -99,14 +99,6 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
-}
-
-@media (max-width: 480px) {
-  .contact-actions {
-    flex-direction: column;
-    width: 100%;
-    align-items: stretch;
-  }
 }
 
 .contact-btn {
@@ -132,15 +124,15 @@
 }
 
 .contact-btn--primary {
-  background-color: var(--color-gold, #C5A059);
-  color: #0D0D0D;
-  border: 1px solid var(--color-gold, #C5A059);
+  background-color: var(--color-primary, #171714);
+  color: #FFFFFF;
+  border: 1px solid var(--color-primary, #171714);
 }
 
 .contact-btn--primary:hover {
-  background-color: #D8B268;
-  border-color: #D8B268;
-  color: #0D0D0D;
+  background-color: #000000;
+  border-color: var(--color-gold, #B89455);
+  color: var(--color-gold, #B89455);
 }
 
 .contact-btn--primary:hover .btn-arrow {
@@ -148,15 +140,14 @@
 }
 
 .contact-btn--secondary {
-  background-color: var(--color-surface, #141413);
-  color: var(--color-primary, #F5F1E8);
-  border: 1px solid var(--color-border, rgba(245, 241, 232, 0.12));
+  background-color: transparent;
+  color: var(--color-primary, #171714);
+  border: 1px solid var(--color-border, #DED7C9);
 }
 
 .contact-btn--secondary:hover {
-  border-color: var(--color-gold, #C5A059);
-  color: var(--color-gold, #C5A059);
-  background-color: #1A1A18;
+  border-color: var(--color-primary, #171714);
+  background-color: rgba(23, 23, 20, 0.03);
 }
 
 .contact-btn--secondary:hover .btn-arrow {
@@ -168,14 +159,14 @@
   display: flex;
   flex-direction: column;
   gap: clamp(32px, 4.5vh, 44px);
-  border-left: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  border-left: 1px solid var(--color-border, #DED7C9);
   padding-left: clamp(24px, 4vw, 48px);
 }
 
 @media (max-width: 960px) {
   .contact-info-column {
     border-left: none;
-    border-top: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+    border-top: 1px solid var(--color-border, #DED7C9);
     padding-left: 0;
     padding-top: clamp(28px, 4vh, 40px);
     display: grid;
@@ -203,7 +194,7 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   margin-bottom: 2px;
 }
 
@@ -211,7 +202,7 @@
 .contact-links-grid {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  border-top: 1px solid var(--color-border, #DED7C9);
 }
 
 .contact-text-link {
@@ -219,7 +210,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
-  border-bottom: 1px solid var(--color-border, rgba(245, 241, 232, 0.08));
+  border-bottom: 1px solid var(--color-border, #DED7C9);
   text-decoration: none;
   color: inherit;
   transition: all 300ms ease;
@@ -231,7 +222,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   transition: color 300ms ease;
 }
 
@@ -242,26 +233,26 @@
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   transition: color 300ms ease;
 }
 
 .link-arrow {
   font-size: 13px;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   transition: transform 300ms ease, color 300ms ease;
 }
 
 .contact-text-link:hover .contact-link-label {
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
 }
 
 .contact-text-link:hover .contact-link-val {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
 }
 
 .contact-text-link:hover .link-arrow {
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
   transform: translate(2px, -2px);
 }
 
@@ -271,14 +262,14 @@
   font-family: var(--font-sans, 'Manrope', sans-serif);
   font-size: 14px;
   line-height: 1.65;
-  color: var(--color-secondary, #9E9A90);
+  color: var(--color-secondary, #5B5851);
   display: flex;
   flex-direction: column;
 }
 
 .address-brand {
   font-weight: 700;
-  color: var(--color-primary, #F5F1E8);
+  color: var(--color-primary, #171714);
   margin-bottom: 2px;
 }
 
@@ -293,7 +284,7 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-gold, #C5A059);
+  color: var(--color-gold, #B89455);
   transition: all 300ms ease;
 }
 
@@ -303,7 +294,7 @@
 }
 
 .contact-maps-link:hover {
-  color: var(--color-gold-hover, #D8B268);
+  color: var(--color-gold-hover, #9E7D42);
 }
 
 .contact-maps-link:hover .maps-arrow {
