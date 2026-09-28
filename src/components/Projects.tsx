@@ -210,11 +210,13 @@ export const Projects: React.FC = () => {
         <div ref={gridRef} className="projects-grid" role="list">
           {filteredProjects.map((project) => {
             const spanClass = project.gridSpan ? `span-${project.gridSpan}` : 'span-standard';
+            const isPortrait = Boolean(project.isPortrait);
+            const portraitClass = isPortrait ? 'project-card--portrait' : '';
 
             return (
               <article
                 key={project.id}
-                className={`project-card ${spanClass}`}
+                className={`project-card ${spanClass} ${portraitClass}`}
                 role="listitem"
                 tabIndex={0}
                 onClick={() => setActiveModalProject(project)}

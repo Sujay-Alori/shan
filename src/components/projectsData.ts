@@ -20,6 +20,7 @@ export interface ProjectItem {
   description: string;
   isFeatured?: boolean;
   gridSpan?: 'featured' | 'tall' | 'wide' | 'standard';
+  isPortrait?: boolean;
   services?: string[];
   year?: string;
 }
@@ -130,23 +131,6 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title: 'PROJECT NAME 05',
     location: 'LOCATION',
     area: 'AREA',
-    status: 'ONGOING',
-    type: 'PROJECT TYPE',
-    categories: ['ONGOING', 'RESIDENTIAL', 'EXTERIOR'],
-    image: '/images/projects/ext4.jpeg',
-    description:
-      'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
-    isFeatured: false,
-    gridSpan: 'standard',
-    services: ['Architectural Design', 'Permit Drawings', 'Electrical Planning'],
-    year: 'YEAR',
-  },
-  {
-    id: 'project-06',
-    number: '06',
-    title: 'PROJECT NAME 06',
-    location: 'LOCATION',
-    area: 'AREA',
     status: 'COMPLETED',
     type: 'PROJECT TYPE',
     categories: ['COMPLETED', 'RENOVATION', 'RESIDENTIAL'],
@@ -159,9 +143,9 @@ export const PROJECTS_DATA: ProjectItem[] = [
     year: 'YEAR',
   },
   {
-    id: 'project-07',
-    number: '07',
-    title: 'PROJECT NAME 07',
+    id: 'project-06',
+    number: '06',
+    title: 'PROJECT NAME 06',
     location: 'LOCATION',
     area: 'AREA',
     status: 'COMPLETED',
@@ -176,9 +160,9 @@ export const PROJECTS_DATA: ProjectItem[] = [
     year: 'YEAR',
   },
   {
-    id: 'project-08',
-    number: '08',
-    title: 'PROJECT NAME 08',
+    id: 'project-07',
+    number: '07',
+    title: 'PROJECT NAME 07',
     location: 'LOCATION',
     area: 'AREA',
     status: 'ONGOING',
@@ -193,9 +177,9 @@ export const PROJECTS_DATA: ProjectItem[] = [
     year: 'YEAR',
   },
   {
-    id: 'project-09',
-    number: '09',
-    title: 'PROJECT NAME 09',
+    id: 'project-08',
+    number: '08',
+    title: 'PROJECT NAME 08',
     location: 'LOCATION',
     area: 'AREA',
     status: 'COMPLETED',

@@ -399,8 +399,8 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
             <div className="mobile-menu-footer">
               <span className="mobile-menu-location">Tirur, Kerala, India</span>
-              <a href="tel:+919645900011" className="mobile-menu-phone">
-                +91 96459 00011
+              <a href="tel:+919645900012" className="mobile-menu-phone">
+                +91 9645900012
               </a>
             </div>
           </div>

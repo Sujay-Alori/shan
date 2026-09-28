@@ -121,18 +121,16 @@ export const Footer: React.FC = () => {
             <h3 className="footer-col-heading">CONTACT</h3>
             <div className="footer-contact-info">
               <a
-                href="tel:+919645900011"
+                href="tel:+919645900012"
                 className="footer-contact-link"
               >
-                +91 96459 00011
+                +91 9645900012
               </a>
               <a
-                href="https://wa.me/919633980012"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+919633980012"
                 className="footer-contact-link"
               >
-                +91 96339 80012
+                +91 9633980012
               </a>
               <a
                 href="mailto:shanarchstudio0011@gmail.com"
