@@ -230,14 +230,27 @@ export const Projects: React.FC = () => {
               >
                 {/* 1. PROJECT NAME & META */}
                 <div className="project-card-header">
-                  <h3 className="project-title">{project.title}</h3>
-                  <div className="project-meta-line">
-                    <span>{project.location}</span>
-                    <span className="meta-sep" aria-hidden="true">|</span>
-                    <span>{project.area}</span>
-                    <span className="meta-sep" aria-hidden="true">|</span>
-                    <span>{project.type}</span>
-                  </div>
+                  {project.client ? (
+                    <>
+                      <h3 className="project-title">Client : {project.client}</h3>
+                      <div className="project-meta-line">
+                        <span>Location : {project.location}</span>
+                        <span className="meta-sep" aria-hidden="true">|</span>
+                        <span>Area : {project.area}</span>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className="project-title">{project.title}</h3>
+                      <div className="project-meta-line">
+                        <span>{project.location}</span>
+                        <span className="meta-sep" aria-hidden="true">|</span>
+                        <span>{project.area}</span>
+                        <span className="meta-sep" aria-hidden="true">|</span>
+                        <span>{project.type}</span>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* 2. [IMAGE PLACEHOLDER] */}

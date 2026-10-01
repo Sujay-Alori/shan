@@ -77,7 +77,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             {/* Title & Status Badge Header */}
             <div className="project-modal-header">
               <div className="project-modal-title-row">
-                <h2 className="project-modal-title">{project.title}</h2>
+                <h2 className="project-modal-title">
+                  {project.client ? `Client : ${project.client}` : project.title}
+                </h2>
                 <span className="project-modal-status-badge">
                   {project.status}
                 </span>
@@ -86,27 +88,50 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
             {/* Clean 2-Column Project Details Layout */}
             <div className="project-modal-meta-grid">
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">CATEGORY</span>
-                <span className="modal-meta-value">
-                  {project.categories?.join(', ') || project.area || 'Residential'}
-                </span>
-              </div>
+              {project.client ? (
+                <>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">CLIENT</span>
+                    <span className="modal-meta-value">{project.client}</span>
+                  </div>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">LOCATION</span>
+                    <span className="modal-meta-value">{project.location}</span>
+                  </div>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">BUILT-UP AREA</span>
+                    <span className="modal-meta-value">{project.area}</span>
+                  </div>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">DISCIPLINE</span>
+                    <span className="modal-meta-value">{project.type}</span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">CATEGORY</span>
+                    <span className="modal-meta-value">
+                      {project.categories?.join(', ') || project.area || 'Residential'}
+                    </span>
+                  </div>
 
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">DISCIPLINE</span>
-                <span className="modal-meta-value">{project.type}</span>
-              </div>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">DISCIPLINE</span>
+                    <span className="modal-meta-value">{project.type}</span>
+                  </div>
 
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">LOCATION</span>
-                <span className="modal-meta-value">{project.location}</span>
-              </div>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">LOCATION</span>
+                    <span className="modal-meta-value">{project.location}</span>
+                  </div>
 
-              <div className="modal-meta-item">
-                <span className="modal-meta-label">PRACTICE</span>
-                <span className="modal-meta-value">Shan Arch Studio</span>
-              </div>
+                  <div className="modal-meta-item">
+                    <span className="modal-meta-label">PRACTICE</span>
+                    <span className="modal-meta-value">Shan Arch Studio</span>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Project Description */}

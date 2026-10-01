@@ -11,6 +11,7 @@ export interface ProjectItem {
   id: string;
   number: string;
   title: string;
+  client?: string;
   location: string;
   area: string;
   status: 'COMPLETED' | 'ONGOING';
@@ -36,8 +37,8 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
 ];
 
 /**
- * Centralized Placeholder Project Dataset for Shan Arch Studio.
- * Standardized placeholder structure ready for client project information and photos.
+ * Centralized Project Dataset for Shan Arch Studio.
+ * Standardized structure for client project information and photography.
  */
 export const PROJECTS_DATA: ProjectItem[] = [
   {
@@ -92,21 +93,22 @@ export const PROJECTS_DATA: ProjectItem[] = [
     year: 'YEAR',
   },
   {
-    id: 'project-03',
-    number: '03',
-    title: 'PROJECT NAME 03',
-    location: 'LOCATION',
-    area: 'AREA',
+    id: 'ongoing-maheedha',
+    number: '01',
+    title: 'Maheedha Residence',
+    client: 'Maheedha',
+    location: 'Chelari',
+    area: '2600 sqft',
     status: 'ONGOING',
-    type: 'PROJECT TYPE',
-    categories: ['ONGOING', 'COMMERCIAL', 'EXTERIOR'],
-    image: '/images/projects/ext2.jpeg',
+    type: 'Residential Architecture',
+    categories: ['ONGOING'],
+    image: '/images/projects/Maheedha.jpeg',
     description:
-      'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
-    isFeatured: false,
-    gridSpan: 'tall',
-    services: ['Commercial Architecture', 'Structural Drawings', 'Site Supervision'],
-    year: 'YEAR',
+      'An ongoing bespoke contemporary residential architecture project designed for Maheedha in Chelari. Featuring a striking pitched roofline, curated timber louvers, warm earthy materiality, and expansive tropical cross-ventilation across 2,600 sq.ft.',
+    isFeatured: true,
+    gridSpan: 'featured',
+    services: ['Architectural Planning', '3D Exterior Elevation', 'Structural Engineering', 'Site Execution'],
+    year: '2025',
   },
   {
     id: 'project-04',
@@ -160,21 +162,40 @@ export const PROJECTS_DATA: ProjectItem[] = [
     year: 'YEAR',
   },
   {
-    id: 'project-07',
-    number: '07',
-    title: 'PROJECT NAME 07',
-    location: 'LOCATION',
-    area: 'AREA',
+    id: 'ongoing-fairoos',
+    number: '02',
+    title: 'Fairoos Residence',
+    client: 'Fairoos',
+    location: 'Tanur',
+    area: '2450 sqft',
     status: 'ONGOING',
-    type: 'PROJECT TYPE',
-    categories: ['ONGOING', 'COMMERCIAL', 'EXTERIOR'],
-    image: '/images/projects/ext5.jpeg',
+    type: 'Residential Architecture',
+    categories: ['ONGOING'],
+    image: '/images/projects/Fairoos.jpeg',
     description:
-      'Temporary placeholder project description. High-resolution project photography, architectural specifications, and detailed case study information will be inserted here.',
+      'An ongoing modern luxury home for Fairoos in Tanur, blending textured stone feature walls, expansive glazed openings, and refined tropical landscaping across 2,450 sq.ft.',
     isFeatured: false,
-    gridSpan: 'tall',
-    services: ['Master Planning', 'Architectural Design', 'Site Supervision'],
-    year: 'YEAR',
+    gridSpan: 'standard',
+    services: ['Architectural Design', 'Interior Spatial Planning', 'Site Supervision'],
+    year: '2025',
+  },
+  {
+    id: 'ongoing-shafi',
+    number: '03',
+    title: 'Mr. Shafi Residence',
+    client: 'Mr. Shafi',
+    location: 'Tirur',
+    area: '2900 sqft',
+    status: 'ONGOING',
+    type: 'Residential Architecture',
+    categories: ['ONGOING'],
+    image: '/images/projects/Shafi.jpeg',
+    description:
+      'An ongoing grand residential villa for Mr. Shafi in Tirur, characterized by dual dramatic gables, arched vertical fenestrations, warm ambient architectural lighting, and 2,900 sq.ft. of refined living space.',
+    isFeatured: false,
+    gridSpan: 'standard',
+    services: ['Complete Architectural Solutions', '3D Visualisation', 'Working Drawings', 'Site Supervision'],
+    year: '2025',
   },
   {
     id: 'project-08',
