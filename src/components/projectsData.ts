@@ -42,6 +42,24 @@ export const PORTFOLIO_CATEGORIES: ProjectCategory[] = [
  */
 export const PROJECTS_DATA: ProjectItem[] = [
   {
+    id: 'completed-marakkar',
+    number: '01',
+    title: 'Marakkar Residence',
+    client: 'Marakkar',
+    location: 'Ozhur (Malappuram)',
+    area: '3300 sqft',
+    status: 'COMPLETED',
+    type: 'Residential',
+    categories: ['COMPLETED'],
+    image: '/images/projects/compp.jpeg',
+    description:
+      'A bespoke completed contemporary residential architecture project designed for Marakkar in Ozhur (Malappuram), featuring elegant spatial planning, refined modern elevation, and premium architectural detailing across 3,300 sqft.',
+    isFeatured: true,
+    gridSpan: 'featured',
+    services: ['Architectural Planning', 'Residential Design', '3D Visualisation', 'Site Execution'],
+    year: '2024',
+  },
+  {
     id: 'project-interior-01',
     number: '01',
     title: 'Interior Design Project',
