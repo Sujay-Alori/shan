@@ -18,6 +18,8 @@ export interface ProjectItem {
   type: string;
   categories: ProjectCategory[];
   image: string;
+  images?: string[];
+  gallery?: string[];
   description: string;
   isFeatured?: boolean;
   gridSpan?: 'featured' | 'tall' | 'wide' | 'standard';
@@ -72,6 +74,26 @@ export const PROJECTS_DATA: ProjectItem[] = [
     image: '/images/projects/completed.jpeg',
     description:
       'A bespoke completed contemporary residential architecture project designed for Juwan in Karathoor, featuring elegant spatial planning, refined modern elevation, and premium architectural detailing across 2,980 sqft.',
+    isFeatured: false,
+    gridSpan: 'standard',
+    services: ['Architectural Planning', 'Residential Design', '3D Visualisation', 'Site Execution'],
+    year: '2024',
+  },
+  {
+    id: 'completed-shamleena',
+    number: '03',
+    title: 'Shamleena Residence',
+    client: 'Shamleena',
+    location: 'Pookkavil',
+    area: '1896 sqft',
+    status: 'COMPLETED',
+    type: 'Residential',
+    categories: ['COMPLETED'],
+    image: '/images/projects/sham.jpeg',
+    images: ['/images/projects/sham.jpeg'],
+    gallery: ['/images/projects/sham.jpeg'],
+    description:
+      'A bespoke completed contemporary residential architecture project designed for Shamleena in Pookkavil, featuring elegant spatial planning, refined modern elevation, and premium architectural detailing across 1,896 sqft.',
     isFeatured: false,
     gridSpan: 'standard',
     services: ['Architectural Planning', 'Residential Design', '3D Visualisation', 'Site Execution'],
@@ -199,6 +221,26 @@ export const PROJECTS_DATA: ProjectItem[] = [
     isFeatured: false,
     gridSpan: 'standard',
     services: ['Architectural Design', '3D Exterior Elevation', 'Permit Drawings', 'Site Supervision'],
+    year: '2025',
+  },
+  {
+    id: 'ongoing-sajitha',
+    number: '06',
+    title: 'Sajitha Residence',
+    client: 'Sajitha',
+    location: 'BP Angadi',
+    area: '1560 sqft',
+    status: 'ONGOING',
+    type: 'Residential Architecture',
+    categories: ['ONGOING'],
+    image: '/images/projects/saji.jpeg',
+    images: ['/images/projects/saji.jpeg', '/images/projects/sham.jpeg'],
+    gallery: ['/images/projects/saji.jpeg', '/images/projects/sham.jpeg'],
+    description:
+      'An ongoing bespoke contemporary residential architecture project designed for Sajitha in BP Angadi, featuring thoughtful spatial planning, modern elevation, and refined architectural detailing across 1,560 sqft.',
+    isFeatured: false,
+    gridSpan: 'standard',
+    services: ['Architectural Planning', 'Residential Design', '3D Visualisation', 'Site Execution'],
     year: '2025',
   },
   {
